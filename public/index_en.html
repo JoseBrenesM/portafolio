@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+<body>
+    <canvas id="lamp-anim" class="lamp-anim" width="300px" height="100px"></canvas>
+    <div class="container">
+        <header>
+            <nav class="navegacion">
+                <ul>
+                    <li><a href="#inicio" class="nav_active">Home</a></li>
+                    <li><a href="#portafolio">Portfolio</a></li>
+                    <li><a href="#contacto">Contact</a></li>
+                    <li>
+                        <div class="language-selector">
+                            <select id="language-selector" onchange="changeLanguage()">
+                                <option value="en">English</option>
+                                <option value="es">Español</option> 
+                            </select>
+                        </div>        
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            
+            <section class="Inicio" id="inicio" style="margin: 0;">
+                <section class="welcome-section">
+                    <div class="welcome-content">
+                        <h1>Welcome</h1>
+                        <p>Hello! I'm José Andrés Brenes, and this is my website, where you can learn more about me and my work.</p>
+                        <p>Any suggestions or messages you want to leave me, you can <a href="#contacto" style="text-decoration: none; font-weight: bold; color: #000;">Contact</a> me.</p>
+                    </div>
+                    <div class="welcome-image">
+                        <img src="img/icons/welcome.webp" alt="Welcome">
+                    </div>
+                </section>
+                
+                <section>
+                    <div class="about">
+                        <h5>About Me</h5>
+                    </div>
+                    <div class="grid-container">
+                        
+                        <div class="card myinfo">
+                            <h1>Information</h1>
+                            <p>My name is José Andrés Brenes, I'm 20 years old, I'm a Computer Systems Engineering student at Fidelitas University, with 75% of the career completed. I am a responsible person, very committed to my work, I am constantly growing and my desire is to contribute to companies so that the profit is mutual since I contribute to the company and acquire knowledge from it. My goal is to adapt to any requirement and exceed expectations. I like backend development and database administration whether they are SQL or NoSQL. I haven't had experience in a company as such since I am currently focused on my studies, but I consider that with what I have learned at the University I can handle any challenge or need of a company.</p>
+                        </div>
+                        <div class="card education">
+                            <h2>Education</h2>
+                            <p>High school diploma at San Luis Gonzaga School (2016-2020)</p>
+                            <button  onclick="openModal()">View degree</button>
+                            <p>Bachelor's degree in Computer Systems Engineering at Fidelitas (2021-Present)</p>
+                            <div class="extratitles">
+                                <p style="font-weight: bold; text-align: center; margin-bottom: 10px;">Other degrees</p>
+                                <ul style="list-style-type: none; padding: 0;">
+                                    <li style="margin-bottom: 10px;">
+                                        <p style="margin: 0;">SCRUM</p>
+                                        <button onclick="openModal2()" style="width: 100%;">View degree</button>
+                                    </li>
+                                    <li style="margin-bottom: 10px;">
+                                        <p style="margin: 0;">CCNA v7</p>
+                                        <button onclick="openModal3()" style="width: 100%;">View degree</button>
+                                    </li>
+                                </ul>
+                                <br>
+                            </div>
+                            
+                            
+                        </div>
+                        <div id="myModal3" class="modal">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal3()">&times;</span>
+                                <h2>Degree</h2>
+                                <img src="img/titles/CCNA.png" alt="Degree" style="width: 50%; height: 50%;">
+                            </div>
+                        </div>
+                        <div id="myModal2" class="modal">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal2()">&times;</span>
+                                <h2>Degree</h2>
+                                <img src="img/titles/SCRUM.png" alt="Degree" style="width: 50%; height: 50%;">
+                            </div>
+                        </div>
+                        <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal()">&times;</span>
+                                <h2>Degree</h2>
+                                <img src="img/titles/BEM.jpg" alt="Degree" style="width: 50%; height: 50%;">
+                            </div>
+                        </div>
+                        <div class="card soft_skills">
+                            <h3>Soft Skills</h3>
+                            <p>I am a person who believes that not only development skills are important but also soft skills play an important role in identifying a person, that's why I make a list of skills that represent me as a person</p>
+                            <ul>
+                                <li>Responsible</li>
+                                <li>Creativity</li>
+                                <li>Leadership</li>
+                                <li>Teamwork</li>
+                                <li>Communication</li>
+                            </ul>
+                            <p style="font-weight: bold; text-align: center;">Extra Skills</p>
+                            <ul>
+                                <li>
+                                    Git/GitHub
+                                </li>
+                                <li>
+                                    Typing
+                                </li>
+                                <li>
+                                    Computer Maintenance
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card language">
+                            <h4>Programming Skills</h4>
+                            <div class="psp">
+                                <p>Frontend</p>
+                                
+                                <div class="psf_img">
+                                    <img src="img/icons/html.svg" alt="html" loading="lazy">
+                                    <img src="img/icons/css.svg" alt="html" loading="lazy">
+                                    <img src="img/icons/js.svg" alt="html" loading="lazy">
+                                 </div>
+                                <p>Backend</p>
+                                <div class="psf_img">
+                                    <img src="img/icons/c.svg" alt="html" loading="lazy">
+                                    <img src="img/icons/node.svg" alt="html" loading="lazy">
+                                    <img src="img/icons/php.svg" alt="html" loading="lazy">
+                                 </div>
+                                <p>Database</p>
+                                <div class="psf_img">
+                                    <img src="img/icons/mongo.svg" alt="html" loading="lazy">
+                                    <img src="img/icons/sql.svg" alt="html" loading="lazy">
+                                    <img src="img/icons/mysql.svg" alt="html" loading="lazy">
+                                 </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </section>
+            </section>
+            
+            <section class="portafolio" id="portafolio">
+                <h3>Welcome to my portfolio</h3>
+            </section>
+
+            <section class="Contacto" id="contacto">
+                <div class="about">
+                    <h5>Contact</h5>
+                </div>
+                <h2 style="font-weight: bold; text-align: center;">You can leave me a message</h2>
+                <div class="form-container">
+                    <form  method="POST" action="/api/contact">
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" id="fbutton" class="fbutton">Send</button>
+                    </form>
+                </div>
+                <h2 style="font-weight: bold; text-align: center;">Or you can contact me in the following ways</h2>
+                <p style="font-weight: bold; text-align: center;">Phone: +506 64856905</p>
+                <div class="grid_redes">
+                    <div class="card2">
+                        <a href="https://github.com/JoseBrenesM" target="_blank"><img src="img/icons/github.svg" alt="github" loading="lazy" class="gitimg"></a>
+                    </div>
+                    <div class="card2">
+                        <a href="https://www.linkedin.com/in/jos%C3%A9-a-8a90a8273" target="_blank"><img src="img/icons/linkedin.svg" alt="linkedin" loading="lazy" class="inimg"></a>
+                    </div>
+                    <div class="card2">
+                        <a href="mailto:joseandresbrenesmontero@gmail.com" target="_blank"><img src="img/icons/gmail.svg" alt="gmail" loading="lazy" class="gimg"></a>
+                    </div>
+                </div>        
+        
+            </section>
+            <br>
+        </main>
+       <br>
+            <footer class="site-footer">
+                <div class="footer-container">
+                    <p class="footer-text">Jose Brenes's Page</p>
+                    <p class="footer-text">All rights reserved</p>
+                    <p class="footer-text">2024</p>
+                </div>
+            </footer>
+
+    </div>
+    
+    <script>
+        function changeLanguage() {
+            var language = document.getElementById("language-selector").value;
+            window.location.href = "index"  + ".html";
+        }
+    </script>
+    <script src="scripts/bubble.js"></script>
+    <script src="scripts/contact.js"></script>
+    <script src="scripts/model.js"></script>
+</body>
+</html>
