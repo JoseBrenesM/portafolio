@@ -283,16 +283,16 @@ body {
 .cardPortfolio {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center; /* Centrar la tarjeta */
 }
 
 .cardP {
-    width: calc(30% - 20px); /* Ancho ajustado para tres tarjetas por fila con espacio entre ellas */
-    margin-bottom: 20px;
+    width: calc(100% - 40px); /* Ancho ajustado para una sola tarjeta por fila con espacio de padding */
     background-color: #fff;
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
 }
 
 .cardP h3 {
@@ -302,14 +302,10 @@ body {
 
 .cardP p {
     color: #666;
-    overflow: hidden;
-    text-overflow: ellipsis; /* Truncar el texto que desborde */
-    white-space: nowrap; /* Evitar que el texto se divida en múltiples líneas */
 }
 
 .imgs-container {
     position: relative;
-    width: 100%;
 }
 
 .carousel {
@@ -327,14 +323,14 @@ body {
 /* Consulta de medios para ajustar el diseño en pantallas más pequeñas */
 @media screen and (max-width: 768px) {
     .cardP {
-        width: calc(50% - 20px); /* Dos tarjetas por fila en pantallas más pequeñas */
+        width: calc(100% - 40px); /* Mantener una tarjeta por fila en pantallas más pequeñas */
     }
 }
 
 /* Consulta de medios para ajustar el diseño en pantallas aún más pequeñas */
 @media screen and (max-width: 480px) {
     .cardP {
-        width: 100%; /* Una tarjeta por fila en pantallas muy pequeñas */
+        width: calc(100% - 20px); /* Reducir el espacio de padding en pantallas muy pequeñas */
     }
 }
 
