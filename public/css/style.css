@@ -272,7 +272,7 @@ body {
     border-radius: 10px;
     filter: drop-shadow(0 0 5px #000);
 }.portafolio {
-    padding: 40px 20px; /* Aumentar el padding para mayor altura */
+    padding: 40px 20px;
     background-color: #f4f4f4;
 }
 .portafolio {
@@ -283,7 +283,8 @@ body {
 .cardPortfolio {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centrar las tarjetas */
+    justify-content: center; 
+    text-align: center
 }
 
 .cardP {
