@@ -160,12 +160,20 @@
                 <h3>Bienvenido a mi portafolio</h3>
                 <div class="card">
                     <h3>Facebook Clone</h3>
-                    <p>Website que simula Facebook, se utiliza Node.js junto a Express para el backend, cuenta con funcionalidades como jsonwebtoken para autenticar al usuario
-                        bcrypt para encriptar las contraseñas, y ademas se almacenan todo en las bases de datos en mongoDB 
-                    </p>
-                    <a href="https://faceclone-beta.vercel.app/">Visitar</a>
+                    <p>Website que simula Facebook, se utiliza Node.js junto a Express para el backend, cuenta con funcionalidades como jsonwebtoken para autenticar al usuario bcrypt para encriptar las contraseñas, y además se almacenan todo en las bases de datos en mongoDB, cuenta con sección de publicaciones, realzar una publicación, likes, comentarios, respuestas, además de sección de comercios y edición del perfil de usuario.</p>
+                    <div class="imgs-container">
+                        <div class="carousel">
+                            <img src="img/face/face1.png" alt="">
+                            <img src="img/face/face2.png" alt="">
+                        </div>
+                        <button class="prev" onclick="prevImage()">&#10094;</button>
+                        <button class="next" onclick="nextImage()">&#10095;</button>
+                    </div>
+                    
+                    <a href="https://faceclone-beta.vercel.app/" target="_blank" style="font-weight: bold; color: rgb(5, 5, 145);">Visitar</a>
                 </div>
             </section>
+            
             <section class="Contacto" id="contacto">
                 <div class="about">
                     <h5>Contacto</h5>
@@ -212,7 +220,33 @@
             </footer>
 
     </div>
-    
+    <script>
+        let currentImageIndex = 0;
+const images = document.querySelectorAll('.carousel img');
+
+function showImage(index) {
+    images.forEach((image, i) => {
+        if (i === index) {
+            image.style.display = 'block';
+        } else {
+            image.style.display = 'none';
+        }
+    });
+}
+
+function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    showImage(currentImageIndex);
+}
+
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    showImage(currentImageIndex);
+}
+
+showImage(currentImageIndex);
+
+    </script>
     <script>
         function changeLanguage() {
             var language = document.getElementById("language-selector").value;
