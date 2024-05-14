@@ -223,6 +223,8 @@
     <script>
         let currentImageIndex = 0;
 const images = document.querySelectorAll('.carousel img');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
 
 function showImage(index) {
     images.forEach((image, i) => {
@@ -244,7 +246,32 @@ function nextImage() {
     showImage(currentImageIndex);
 }
 
+function updateButtonsVisibility() {
+    if (currentImageIndex === 0) {
+        prevButton.style.display = 'none';
+    } else {
+        prevButton.style.display = 'block';
+    }
+
+    if (currentImageIndex === images.length - 1) {
+        nextButton.style.display = 'none';
+    } else {
+        nextButton.style.display = 'block';
+    }
+}
+
+prevButton.addEventListener('click', () => {
+    prevImage();
+    updateButtonsVisibility();
+});
+
+nextButton.addEventListener('click', () => {
+    nextImage();
+    updateButtonsVisibility();
+});
+
 showImage(currentImageIndex);
+updateButtonsVisibility();
 
     </script>
     <script>

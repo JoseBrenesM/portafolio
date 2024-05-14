@@ -33,10 +33,11 @@ body {
 .carousel {
     display: flex;
     overflow: hidden;
+    position: relative;
 }
 
 .carousel img {
-    width: 100%;
+    width: 50%;
     display: block;
 }
 
@@ -51,6 +52,7 @@ body {
     cursor: pointer;
     padding: 10px;
     z-index: 2;
+    display: none;
 }
 
 .prev {
