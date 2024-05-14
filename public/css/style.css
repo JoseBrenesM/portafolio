@@ -276,18 +276,19 @@ body {
     background-color: #f4f4f4;
 }
 .portafolio {
-    padding: 40px 20px;
+    padding: 20px;
     background-color: #f4f4f4;
 }
 
 .cardPortfolio {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centrar la tarjeta */
+    justify-content: center; /* Centrar las tarjetas */
 }
 
 .cardP {
-    width: calc(100% - 40px); /* Ancho ajustado para una sola tarjeta por fila con espacio de padding */
+    width: calc(100% - 40px); /* Ancho ajustado con espacio de padding */
+    max-width: 350px; /* Ancho máximo del card */
     background-color: #fff;
     border-radius: 5px;
     padding: 20px;
@@ -318,20 +319,6 @@ body {
     width: 100%;
     height: auto;
     display: block;
-}
-
-/* Consulta de medios para ajustar el diseño en pantallas más pequeñas */
-@media screen and (max-width: 768px) {
-    .cardP {
-        width: calc(100% - 40px); /* Mantener una tarjeta por fila en pantallas más pequeñas */
-    }
-}
-
-/* Consulta de medios para ajustar el diseño en pantallas aún más pequeñas */
-@media screen and (max-width: 480px) {
-    .cardP {
-        width: calc(100% - 20px); /* Reducir el espacio de padding en pantallas muy pequeñas */
-    }
 }
 
 
