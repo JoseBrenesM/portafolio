@@ -287,8 +287,8 @@ body {
 }
 
 .cardP {
-    width: calc(100% - 40px); /* Ancho ajustado con espacio de padding */
-    max-width: 350px; /* Ancho máximo del card */
+    width: calc(100% - 40px); 
+    max-width: 1150px; 
     background-color: #fff;
     border-radius: 5px;
     padding: 20px;
