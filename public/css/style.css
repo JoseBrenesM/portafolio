@@ -283,12 +283,12 @@ body {
 }
 
 .cardP {
-    width: 45%;
-    margin-bottom: 20px;
+    width: 35%;
+    margin-bottom: 10px;
     background-color: #fff;
     border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .cardP h3 {
