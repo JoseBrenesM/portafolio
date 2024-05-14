@@ -272,7 +272,7 @@ body {
     border-radius: 10px;
     filter: drop-shadow(0 0 5px #000);
 }.portafolio {
-    padding: 20px;
+    padding: 40px 20px; /* Aumentar el padding para mayor altura */
     background-color: #f4f4f4;
 }
 
@@ -283,11 +283,11 @@ body {
 }
 
 .cardP {
-    width: 35%;
-    margin-bottom: 10px;
+    width: 30%; /* Disminuir el ancho para acomodar más tarjetas en una fila */
+    margin-bottom: 20px; /* Aumentar el espacio entre las tarjetas */
     background-color: #fff;
     border-radius: 5px;
-    padding: 10px;
+    padding: 20px; /* Aumentar el padding para mayor espacio interno */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -302,6 +302,8 @@ body {
 
 .imgs-container {
     position: relative;
+    width: 100%; /* Asegurar que el contenedor de imágenes ocupe todo el ancho */
+    height: auto; /* Permitir que la altura se ajuste automáticamente al contenido */
 }
 
 .carousel {
@@ -312,8 +314,10 @@ body {
 
 .carousel img {
     width: 100%;
+    height: auto; /* Hacer la imagen responsive */
     display: block;
 }
+
 @media (max-width: 768px) {
     .welcome-section {
         flex-direction: column;
