@@ -158,10 +158,11 @@
             </section>
             <section class="portafolio" id="portafolio">
                 <h3>Bienvenido a mi portafolio</h3>
-                <div class="card">
-                    <h3>Facebook Clone</h3>
-                    <p>Website que simula Facebook, se utiliza Node.js junto a Express para el backend, cuenta con funcionalidades como jsonwebtoken para autenticar al usuario bcrypt para encriptar las contraseñas, y además se almacenan todo en las bases de datos en mongoDB, cuenta con sección de publicaciones, realzar una publicación, likes, comentarios, respuestas, además de sección de comercios y edición del perfil de usuario.</p>
-                    <div class="imgs-container">
+                <div class="cardPortfolio">
+                    <div class="cardP">
+                        <h3>Facebook Clone</h3>
+                        <p>Website que simula Facebook, se utiliza Node.js junto a Express para el backend, cuenta con funcionalidades como jsonwebtoken para autenticar al usuario bcrypt para encriptar las contraseñas, y además se almacenan todo en las bases de datos en mongoDB, cuenta con sección de publicaciones, realzar una publicación, likes, comentarios, respuestas, además de sección de comercios y edición del perfil de usuario.</p>
+                        <div class="imgs-container">
                         <div class="carousel">
                             <img src="img/face/face1.png" alt="">
                             <img src="img/face/face2.png" alt="">
@@ -171,6 +172,22 @@
                     </div>
                     
                     <a href="https://faceclone-beta.vercel.app/" target="_blank" style="font-weight: bold; color: rgb(5, 5, 145);">Visitar</a>
+                    </div>
+                    <div class="cardP">
+                        <h3>Facebook Clone</h3>
+                        <p>Website que simula Facebook, se utiliza Node.js junto a Express para el backend, cuenta con funcionalidades como jsonwebtoken para autenticar al usuario bcrypt para encriptar las contraseñas, y además se almacenan todo en las bases de datos en mongoDB, cuenta con sección de publicaciones, realzar una publicación, likes, comentarios, respuestas, además de sección de comercios y edición del perfil de usuario.</p>
+                        <div class="imgs-container">
+                        <div class="carousel">
+                            <img src="img/face/face1.png" alt="">
+                            <img src="img/face/face2.png" alt="">
+                        </div>
+                        <button class="prev" onclick="prevImage()">&#10094;</button>
+                        <button class="next" onclick="nextImage()">&#10095;</button>
+                    </div>
+                    
+                    <a href="https://faceclone-beta.vercel.app/" target="_blank" style="font-weight: bold; color: rgb(5, 5, 145);">Visitar</a>
+                    </div>
+                    
                 </div>
             </section>
             
@@ -221,60 +238,6 @@
 
     </div>
     <script>
-        let currentImageIndex = 0;
-const images = document.querySelectorAll('.carousel img');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-
-function showImage(index) {
-    images.forEach((image, i) => {
-        if (i === index) {
-            image.style.display = 'block';
-        } else {
-            image.style.display = 'none';
-        }
-    });
-}
-
-function prevImage() {
-    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-    showImage(currentImageIndex);
-}
-
-function nextImage() {
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    showImage(currentImageIndex);
-}
-
-function updateButtonsVisibility() {
-    if (currentImageIndex === 0) {
-        prevButton.style.display = 'none';
-    } else {
-        prevButton.style.display = 'block';
-    }
-
-    if (currentImageIndex === images.length - 1) {
-        nextButton.style.display = 'none';
-    } else {
-        nextButton.style.display = 'block';
-    }
-}
-
-prevButton.addEventListener('click', () => {
-    prevImage();
-    updateButtonsVisibility();
-});
-
-nextButton.addEventListener('click', () => {
-    nextImage();
-    updateButtonsVisibility();
-});
-
-showImage(currentImageIndex);
-updateButtonsVisibility();
-
-    </script>
-    <script>
         function changeLanguage() {
             var language = document.getElementById("language-selector").value;
             window.location.href = "index_" + language + ".html";
@@ -283,5 +246,33 @@ updateButtonsVisibility();
     <script src="scripts/bubble.js"></script>
     <script src="scripts/contact.js"></script>
     <script src="scripts/model.js"></script>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.carousel img');
+        const totalSlides = slides.length;
+    
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.style.transform = 'translateX(0)';
+                } else {
+                    slide.style.transform = 'translateX(100%)';
+                }
+            });
+        }
+    
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            showSlide(currentIndex);
+        }
+    
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            showSlide(currentIndex);
+        }
+    
+        // Mostrar la primera imagen al cargar la página
+        showSlide(currentIndex);
+    </script>
 </body>
 </html>
