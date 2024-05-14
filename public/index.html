@@ -238,43 +238,6 @@
 
     </div>
     <script>
-        function changeLanguage() {
-            var language = document.getElementById("language-selector").value;
-            window.location.href = "index_" + language + ".html";
-        }
-    </script>
-    <script src="scripts/bubble.js"></script>
-    <script src="scripts/contact.js"></script>
-    <script src="scripts/model.js"></script>
-    <script>
-        let currentIndex = 0;
-        const slides = document.querySelectorAll('.carousel img');
-        const totalSlides = slides.length;
-    
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                if (i === index) {
-                    slide.style.transform = 'translateX(0)';
-                } else {
-                    slide.style.transform = 'translateX(100%)';
-                }
-            });
-        }
-    
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            showSlide(currentIndex);
-        }
-    
-        function prevImage() {
-            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-            showSlide(currentIndex);
-        }
-    
-        // Mostrar la primera imagen al cargar la página
-        showSlide(currentIndex);
-    </script>
-    <script>
         let currentCardIndex = 0;
         const cards = document.querySelectorAll('.cardP');
         const totalCards = cards.length;
@@ -302,6 +265,15 @@
         // Mostrar la primera tarjeta al cargar la página
         showCard(currentCardIndex);
     </script>
-    
+    <script>
+        function changeLanguage() {
+            var language = document.getElementById("language-selector").value;
+            window.location.href = "index_" + language + ".html";
+        }
+    </script>
+    <script src="scripts/bubble.js"></script>
+    <script src="scripts/contact.js"></script>
+    <script src="scripts/model.js"></script>
+  
 </body>
 </html>
