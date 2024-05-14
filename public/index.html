@@ -274,5 +274,34 @@
         // Mostrar la primera imagen al cargar la página
         showSlide(currentIndex);
     </script>
+    <script>
+        let currentCardIndex = 0;
+        const cards = document.querySelectorAll('.cardP');
+        const totalCards = cards.length;
+    
+        function showCard(index) {
+            cards.forEach((card, i) => {
+                if (i === index) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    
+        function nextCard() {
+            currentCardIndex = (currentCardIndex + 1) % totalCards;
+            showCard(currentCardIndex);
+        }
+    
+        function prevCard() {
+            currentCardIndex = (currentCardIndex - 1 + totalCards) % totalCards;
+            showCard(currentCardIndex);
+        }
+    
+        // Mostrar la primera tarjeta al cargar la página
+        showCard(currentCardIndex);
+    </script>
+    
 </body>
 </html>
