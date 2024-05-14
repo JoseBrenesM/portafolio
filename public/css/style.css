@@ -314,30 +314,6 @@ body {
     width: 100%;
     display: block;
 }
-
-.prev,
-.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.5);
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 20px;
-    color: #333;
-    z-index: 1;
-}
-
-.prev {
-    left: 0;
-}
-
-.next {
-    right: 0;
-}
-
-
 @media (max-width: 768px) {
     .welcome-section {
         flex-direction: column;

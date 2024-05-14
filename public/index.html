@@ -237,34 +237,6 @@
 
     </div>
     <script>
-        let currentCardIndex = 0;
-        const cards = document.querySelectorAll('.cardP');
-        const totalCards = cards.length;
-    
-        function showCard(index) {
-            cards.forEach((card, i) => {
-                if (i === index) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-    
-        function nextCard() {
-            currentCardIndex = (currentCardIndex + 1) % totalCards;
-            showCard(currentCardIndex);
-        }
-    
-        function prevCard() {
-            currentCardIndex = (currentCardIndex - 1 + totalCards) % totalCards;
-            showCard(currentCardIndex);
-        }
-    
-        // Mostrar la primera tarjeta al cargar la página
-        showCard(currentCardIndex);
-    </script>
-    <script>
         function changeLanguage() {
             var language = document.getElementById("language-selector").value;
             window.location.href = "index_" + language + ".html";
