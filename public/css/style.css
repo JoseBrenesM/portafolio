@@ -462,3 +462,43 @@ canvas{
     margin: 0;
     font-size: 16px;
 }
+/* REGISTRO.HTML */
+.logo img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.registration-form {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dddfe2;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.birthday-section,
+.gender-section {
+    margin-bottom: 10px;
+}
+
+.birthday-inputs select,
+.gender-options input[type="radio"] {
+    margin-right: 5px;
+}
+
+#buttomRegistro {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
