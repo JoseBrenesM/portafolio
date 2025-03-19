@@ -159,42 +159,57 @@
             <section class="portafolio" id="portafolio">
                 <div class="about"><h5>Bienvenido a mi portafolio</h5></div>
                 <div class="p-data" style="text-align: center;">
-                    <p>Aca se encuentran algunos de mis proyectos mas recientes junto a su explicacion</p>
+                    <p>Aquí se encuentran algunos de mis proyectos más recientes junto a su explicación</p>
                 </div>
                 
                 <div class="cardPortfolio">
                     <div class="cardP">
                         <h3>Facebook Clone</h3>
-                        <p style="text-align: center;">Website que simula Facebook, se utiliza Node.js junto a Express para el backend, cuenta con funcionalidades como jsonwebtoken para autenticar al usuario bcrypt para encriptar las contraseñas, y además se almacenan todo en las bases de datos en mongoDB,
-                             cuenta con sección de publicaciones, realzar una publicación, likes, comentarios, respuestas, además de sección de comercios y edición del perfil de usuario 
-                             todo manejado mediante APIs que atienden las solicitudes del usuario.</p>
+                        <p style="text-align: center;">Website que simula Facebook, se utiliza Node.js junto a Express para el backend, cuenta con funcionalidades como jsonwebtoken para autenticar al usuario, bcrypt para encriptar las contraseñas, y además se almacena todo en bases de datos en MongoDB. Cuenta con sección de publicaciones, realizar una publicación, likes, comentarios, respuestas, además de sección de comercios y edición del perfil de usuario, todo manejado mediante APIs que atienden las solicitudes del usuario.</p>
                         <a href="https://faceclone-beta.vercel.app/" target="_blank" style="font-weight: bold; color: rgb(5, 5, 145);">Visitar</a>
                         <div class="imgs-container">
-                        <div class="carousel">
-                            <img src="img/face/face1.png" alt="" >
+                            <div class="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="img/face/face1.png" alt="Facebook Clone Image 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/face/face2.png" alt="Facebook Clone Image 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/face/face3.png" alt="Facebook Clone Image 3">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" onclick="prevSlide()">&#10094;</button>
+                                <button class="carousel-control-next" onclick="nextSlide()">&#10095;</button>
+                            </div>
                         </div>
                     </div>
-                
-                    
-                    </div>
-  
                 </div>
+            
                 <div class="cardPortfolio">
                     <div class="cardP">
                         <h3>Veterinaria El Ganadero</h3>
-                        <p style="text-align: center;">Website que simula Facebook, se utiliza Node.js junto a Express para el backend, cuenta con funcionalidades como jsonwebtoken para autenticar al usuario bcrypt para encriptar las contraseñas, y además se almacenan todo en las bases de datos en mongoDB,
-                             cuenta con sección de publicaciones, realzar una publicación, likes, comentarios, respuestas, además de sección de comercios y edición del perfil de usuario 
-                             todo manejado mediante APIs que atienden las solicitudes del usuario.</p>
-                        <a href="https://faceclone-beta.vercel.app/" target="_blank" style="font-weight: bold; color: rgb(5, 5, 145);">Visitar</a>
+                        <p style="text-align: center;">Website realizado como trabajo final de la universidad, el cual consiste en realizar una web para una empresa real. Esta Web está creada con .NET con una estructura en capas. La base de datos está desarrollada en SQL y desplegada en Azure al igual que el host de la web.</p>
+                        <a href="https://veterinariaelganadero.azurewebsites.net" target="_blank" style="font-weight: bold; color: rgb(5, 5, 145);">Visitar</a>
                         <div class="imgs-container">
-                        <div class="carousel">
-                            <img src="img/face/face1.png" alt="" >
+                            <div class="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="img/vet/vete1.jpg" alt="Veterinaria El Ganadero Image 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/vet/vete2.jpg" alt="Veterinaria El Ganadero Image 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/vet/vete3.jpg" alt="Veterinaria El Ganadero Image 3">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" onclick="prevSlide()">&#10094;</button>
+                                <button class="carousel-control-next" onclick="nextSlide()">&#10095;</button>
+                            </div>
                         </div>
                     </div>
-                
-                    
-                    </div>
-  
                 </div>
             </section>
             
@@ -253,6 +268,32 @@
     <script src="scripts/bubble.js"></script>
     <script src="scripts/contact.js"></script>
     <script src="scripts/model.js"></script>
+    <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const carouselInner = document.querySelector('.carousel-inner');
+            const items = document.querySelectorAll('.carousel-item');
+            if (index >= items.length) currentIndex = 0;
+            if (index < 0) currentIndex = items.length - 1;
+            carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentIndex++;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex--;
+            showSlide(currentIndex);
+        }
+
+        // Inicializar el carrusel
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentIndex);
+        });
+    </script>
   
 </body>
 </html>
