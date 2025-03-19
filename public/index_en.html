@@ -151,26 +151,48 @@
             </section>
             
             <section class="portafolio" id="portafolio">
-                <div class="about"><h5>Welcome to my portfolio</h5></div>
+                <div class="about"><h5>Welcome to My Portfolio</h5></div>
                 <div class="p-data" style="text-align: center;">
-                    <p>Here are some of my most recent projects along with their explanation</p>
+                    <p>Here you will find some of my most recent projects along with their explanations.</p>
                 </div>
-                
-                <div class="cardPortfolio">
-                    <div class="cardP">
-                        <h3>Facebook Clone</h3>
-                        <p style="text-align: center;">Website that simulates Facebook, using Node.js along with Express for the backend, featuring functionalities such as jsonwebtoken for user authentication, bcrypt for password encryption, and everything is stored in MongoDB databases.
-                            It includes a posts section, highlighting a post, likes, comments, replies, as well as a commerce section and user profile editing, 
-                            all managed through APIs that handle user requests.</p>
-                        <a href="https://faceclone-beta.vercel.app/" target="_blank" style="font-weight: bold; color: rgb(5, 5, 145);">Visit</a>
-                        <div class="imgs-container">
-                            <div class="carousel">
-                                <img src="img/face/face1.png" alt="" >
+            
+                <!-- Project carousel container -->
+                <div class="projects-carousel">
+                    <!-- Left arrow -->
+                    <button class="carousel-control-prev" onclick="prevProject()">&#10094;</button>
+            
+                    <!-- Project cards container -->
+                    <div class="carousel-inner">
+                        <div class="cardPortfolio">
+                            <div class="cardP">
+                                <h3>Veterinaria El Ganadero</h3>
+                                <p style="text-align: center;">Website developed as a final university project, which involves creating a web application for a real company. This web is built with .NET using a layered architecture. The database is developed in SQL and deployed on Azure, as is the web host.
+                                    This website includes many functionalities such as authentication via JSON Web Tokens, role-based authorization, allowing clients to register pets, schedule appointments, and its main feature, a point-of-sale system that uses the PayPal API for credit card payments. This project was entirely developed by me as a FullStack developer.
+                                </p>
+                                <a href="https://veterinariaelganadero.azurewebsites.net" target="_blank" style="font-weight: bold; color: rgb(5, 5, 145);">Visit</a>
+                                <div class="imgs-container">
+                                    <img src="img/vet/vete.jpg" alt="Veterinaria El Ganadero Image">
+                                </div>
                             </div>
                         </div>
-                    
+                        <!-- Project 1: Facebook Clone -->
+                        <div class="cardPortfolio active">
+                            <div class="cardP">
+                                <h3>Facebook Clone</h3>
+                                <p style="text-align: center;">Website that simulates Facebook, using Node.js along with Express for the backend. It includes functionalities such as jsonwebtoken for user authentication, bcrypt for password encryption, and stores everything in MongoDB databases. It features a posts section, creating posts, likes, comments, replies, as well as a commerce section and user profile editing, all managed through APIs that handle user requests.</p>
+                                <a href="https://faceclone-beta.vercel.app/" target="_blank" style="font-weight: bold; color: rgb(5, 5, 145);">Visit</a>
+                                <div class="imgs-container">
+                                    <img src="img/face/face1.png" alt="Facebook Clone Image">
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Project 2: Veterinaria El Ganadero -->
+                        
                     </div>
             
+                    <!-- Right arrow -->
+                    <button class="carousel-control-next" onclick="nextProject()">&#10095;</button>
                 </div>
             </section>
             
@@ -178,21 +200,8 @@
                 <div class="about">
                     <h5>Contact</h5>
                 </div>
-                <h2 style="font-weight: bold; text-align: center;">You can leave me a message</h2>
-                <div class="form-container">
-                    <form  method="POST" action="/api/contact">
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message:</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" id="fbutton" class="fbutton">Send</button>
-                    </form>
-                </div>
-                <h2 style="font-weight: bold; text-align: center;">Or you can contact me in the following ways</h2>
+                
+                <h2 style="font-weight: bold; text-align: center;">You can contact me in the following ways</h2>
                 <p style="font-weight: bold; text-align: center; font-size: 30px;">Phone: +506 64856905</p>
                 <div class="grid_redes">
                     <div class="card2">
@@ -229,5 +238,35 @@
     <script src="scripts/bubble.js"></script>
     <script src="scripts/contact.js"></script>
     <script src="scripts/model.js"></script>
+    <script>
+        let currentProjectIndex = 0;
+  
+  function showProject(index) {
+      const projects = document.querySelectorAll('.cardPortfolio');
+      if (index >= projects.length) currentProjectIndex = 0;
+      if (index < 0) currentProjectIndex = projects.length - 1;
+  
+      // Oculta todas las tarjetas
+      projects.forEach(project => project.classList.remove('active'));
+  
+      // Muestra la tarjeta actual
+      projects[currentProjectIndex].classList.add('active');
+  }
+  
+  function nextProject() {
+      currentProjectIndex++;
+      showProject(currentProjectIndex);
+  }
+  
+  function prevProject() {
+      currentProjectIndex--;
+      showProject(currentProjectIndex);
+  }
+  
+  // Inicializar el carrusel
+  document.addEventListener('DOMContentLoaded', () => {
+      showProject(currentProjectIndex);
+  });
+      </script>
 </body>
 </html>
