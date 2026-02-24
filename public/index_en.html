@@ -7,8 +7,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <link href="css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <title>Portfolio</title>
 </head>
 <body>
@@ -18,13 +18,13 @@
             <nav class="navegacion">
                 <ul>
                     <li><a href="#inicio" class="nav_active">Home</a></li>
-                    <li><a href="#portafolio">Portfolio</a></li>
-                    <li><a href="#contacto">Contact</a></li>
+                    <li><a href="#portafolio" class="no_active">Portfolio</a></li>
+                    <li><a href="#contacto" class="no_active">Contact</a></li>
                     <li>
                         <div class="language-selector">
                             <select id="language-selector" onchange="changeLanguage()">
-                                <option value="en">English</option>
-                                <option value="es">Español</option> 
+                                <option value="es">Español</option>
+                                <option value="en" selected>English</option>
                             </select>
                         </div>        
                     </li>
@@ -37,8 +37,8 @@
                 <section class="welcome-section">
                     <div class="welcome-content">
                         <h1>Welcome</h1>
-                        <p>Hello! I'm José Andrés Brenes, and this is my website, where you can learn more about me and my work.</p>
-                        <p>Any suggestions or messages you want to leave me, you can <a href="#contacto" style="text-decoration: none; font-weight: bold; color: #000;">Contact</a> me.</p>
+                        <p>Hi! I'm José Andrés Brenes. This is my personal website, where you can learn more about me and explore some of the projects I’ve built.</p>
+                        <p>If you’d like to share feedback or send me a message, feel free to <a href="#contacto" style="text-decoration: none; font-weight: bold; color: #000;">contact me</a>.</p>
                     </div>
                     <div class="welcome-image">
                         <img src="img/icons/welcome.webp" alt="Welcome">
@@ -52,55 +52,75 @@
                     <div class="grid-container">
                         
                         <div class="card myinfo">
-                            <h1>Information</h1>
-                            <p>My name is José Andrés Brenes, I am 21 years old, and I am a Computer Systems Engineering student at Fidélitas University, having completed 92% of the program. I am a developer focused on web development (both front-end and back-end), with the goal of creating scalable and efficient solutions. I have experience with SQL and NoSQL databases, as well as mobile app development using FlutterFlow. I am seeking new challenges in a dynamic environment where I can grow professionally and contribute to the company’s success with a proactive and collaborative attitude.</p>
+                            <h1>Profile</h1>
+                            <p>
+                                My name is José Andrés Brenes, I’m 22 years old, and I’m a Computer Systems Engineer with experience in backend development, REST API design and integration, and relational database management. I have built services and functional solutions using .NET and Node.js, and I also have experience in technical support and system operations.
+                                <br><br>
+                                I adapt easily to different areas of IT—software development, databases, specialized support, and quality assurance—always focused on delivering clean, reliable, and maintainable solutions.
+                            </p>
                         </div>
+
                         <div class="card education">
                             <h2>Education</h2>
-                            <p>High school diploma at San Luis Gonzaga School (2016-2020)</p>
-                            <button  onclick="openModal()">View degree</button>
-                            <p>Bachelor's degree in Computer Systems Engineering at Fidelitas (2021-2025 pending graduation)</p>
+                            <p>High School Diploma — San Luis Gonzaga High School (2016–2020)</p>
+                            <button onclick="openModal()">View certificate</button>
+                            <hr>
+                            <p>Bachelor’s Degree in Computer Systems Engineering — Universidad Fidélitas (2021–2025)</p>
+                            <button onclick="openModal4()">View certificate</button>
+
                             <div class="extratitles">
-                                <p style="font-weight: bold; text-align: center; margin-bottom: 10px;">Other degrees</p>
+                                <p style="font-weight: bold; text-align: center; margin-bottom: 10px;">Additional Certifications</p>
                                 <ul style="list-style-type: none; padding: 0;">
                                     <li style="margin-bottom: 10px;">
-                                        <p style="margin: 0;">SCRUM</p>
-                                        <button onclick="openModal2()" style="width: 100%;">View degree</button>
+                                        <p style="margin: 0;">Scrum</p>
+                                        <button onclick="openModal2()" style="width: 100%;">View certificate</button>
                                     </li>
                                     <li style="margin-bottom: 10px;">
                                         <p style="margin: 0;">CCNA v7</p>
-                                        <button onclick="openModal3()" style="width: 100%;">View degree</button>
+                                        <button onclick="openModal3()" style="width: 100%;">View certificate</button>
                                     </li>
                                 </ul>
                                 <br>
                             </div>
-                            
-                            
                         </div>
+
                         <div id="myModal3" class="modal">
                             <div class="modal-content">
                                 <span class="close" onclick="closeModal3()">&times;</span>
-                                <h2>Degree</h2>
-                                <img src="img/titles/CCNA.png" alt="Degree" style="width: 50%; height: 50%;">
+                                <h2>Certificate</h2>
+                                <img src="img/titles/CCNA.png" alt="Certificate" style="width: 50%; height: 50%;">
                             </div>
                         </div>
+
                         <div id="myModal2" class="modal">
                             <div class="modal-content">
                                 <span class="close" onclick="closeModal2()">&times;</span>
-                                <h2>Degree</h2>
-                                <img src="img/titles/SCRUM.png" alt="Degree" style="width: 50%; height: 50%;">
+                                <h2>Certificate</h2>
+                                <img src="img/titles/SCRUM.png" alt="Certificate" style="width: 50%; height: 50%;">
                             </div>
                         </div>
+
                         <div id="myModal" class="modal">
                             <div class="modal-content">
                                 <span class="close" onclick="closeModal()">&times;</span>
-                                <h2>Degree</h2>
-                                <img src="img/titles/BEM.jpg" alt="Degree" style="width: 50%; height: 50%;">
+                                <h2>Certificate</h2>
+                                <img src="img/titles/BEM.jpg" alt="Certificate" style="width: 50%; height: 50%;">
                             </div>
                         </div>
+
+                        <div id="myModal4" class="modal">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal4()">&times;</span>
+                                <h2>Certificate</h2>
+                                <img src="img/titles/uni.jpg" alt="Certificate" style="width: 50%; height: 50%;">
+                            </div>
+                        </div>
+
                         <div class="card soft_skills">
                             <h3>Soft Skills</h3>
-                            <p>I am a person who believes that not only development skills are important but also soft skills play an important role in identifying a person, that's why I make a list of skills that represent me as a person</p>
+                            <p>
+                                I believe soft skills are just as important as technical skills. They shape how we communicate, collaborate, and solve problems—so here are a few qualities that represent me.
+                            </p>
                             <ul>
                                 <li>Responsible</li>
                                 <li>Creativity</li>
@@ -108,101 +128,102 @@
                                 <li>Teamwork</li>
                                 <li>Communication</li>
                             </ul>
-                            <p style="font-weight: bold; text-align: center;">Extra Skills</p>
+
+                            <p style="font-weight: bold; text-align: center;">Additional Skills</p>
                             <ul>
-                                <li>
-                                    Git/GitHub
-                                </li>
-                                <li>
-                                    Typing
-                                </li>
-                                <li>
-                                    Computer Maintenance
-                                </li>
+                                <li>Git / GitHub</li>
+                                <li>Typing</li>
+                                <li>Computer Maintenance</li>
                             </ul>
                         </div>
+
                         <div class="card language">
                             <h4>Programming Skills</h4>
                             <div class="psp">
                                 <p>Frontend</p>
-                                
                                 <div class="psf_img">
-                                    <img src="img/icons/html.svg" alt="html" loading="lazy">
-                                    <img src="img/icons/css.svg" alt="html" loading="lazy">
-                                    <img src="img/icons/js.svg" alt="html" loading="lazy">
+                                    <img src="img/icons/html.svg" alt="HTML" loading="lazy">
+                                    <img src="img/icons/css.svg" alt="CSS" loading="lazy">
+                                    <img src="img/icons/js.svg" alt="JavaScript" loading="lazy">
                                  </div>
+
                                 <p>Backend</p>
                                 <div class="psf_img">
-                                    <img src="img/icons/net.png" alt="html" loading="lazy">
-                                    <img src="img/icons/node.svg" alt="html" loading="lazy">
-                                    <img src="img/icons/php.svg" alt="html" loading="lazy">
+                                    <img src="img/icons/net.png" alt=".NET" loading="lazy">
+                                    <img src="img/icons/node.svg" alt="Node.js" loading="lazy">
+                                    <img src="img/icons/php.svg" alt="PHP" loading="lazy">
                                  </div>
+
                                 <p>Database</p>
                                 <div class="psf_img">
-                                    <img src="img/icons/mongo.svg" alt="html" loading="lazy">
-                                    <img src="img/icons/sql.svg" alt="html" loading="lazy">
-                                    <img src="img/icons/firebase-svgrepo-com.svg" alt="html" loading="lazy">
+                                    <img src="img/icons/mongo.svg" alt="MongoDB" loading="lazy">
+                                    <img src="img/icons/sql.svg" alt="SQL" loading="lazy">
+                                    <img src="img/icons/firebase-svgrepo-com.svg" alt="Firebase" loading="lazy">
                                  </div>
                             </div>
-                            
                         </div>
+
                     </div>
                 </section>
             </section>
-            
+
             <section class="portafolio" id="portafolio">
                 <div class="about"><h5>Welcome to My Portfolio</h5></div>
                 <div class="p-data" style="text-align: center;">
-                    <p>Here you will find some of my most recent projects along with their explanations.</p>
+                    <p>Here are some of my most recent projects, along with a brief description of each one.</p>
                 </div>
             
-                <!-- Project carousel container -->
                 <div class="projects-carousel">
-                    <!-- Left arrow -->
                     <button class="carousel-control-prev" onclick="prevProject()">&#10094;</button>
             
-                    <!-- Project cards container -->
                     <div class="carousel-inner">
                         <div class="cardPortfolio">
                             <div class="cardP">
                                 <h3>Veterinaria El Ganadero</h3>
-                                <p style="text-align: center;">Website developed as a final university project, which involves creating a web application for a real company. This web is built with .NET using a layered architecture. The database is developed in SQL and deployed on Azure, as is the web host.
-                                    This website includes many functionalities such as authentication via JSON Web Tokens, role-based authorization, allowing clients to register pets, schedule appointments, and its main feature, a point-of-sale system that uses the PayPal API for credit card payments. This project was entirely developed by me as a FullStack developer.
+                                <p style="text-align: center;">
+                                    A full web application built as my final university project for a real company. Developed with .NET using a layered architecture, with a SQL database deployed on Azure, along with Azure App Service hosting.
+                                    <br><br>
+                                    Features include JWT-based authentication, role-based authorization, pet registration, appointment scheduling, and a point-of-sale module. Payments are integrated through the PayPal API to support card transactions.
+                                    <br><br>
+                                    This project was developed entirely by me as a FullStack developer.
                                 </p>
                                 <a href="https://veterinariaelganadero.azurewebsites.net" target="_blank" style="font-weight: bold; color: rgb(5, 5, 145);">Visit</a>
                                 <div class="imgs-container">
-                                    <img src="img/vet/vete.jpg" alt="Veterinaria El Ganadero Image">
+                                    <img src="img/vet/vete.jpg" alt="Veterinaria El Ganadero">
                                 </div>
                             </div>
                         </div>
+
                         <div class="cardPortfolio active">
                             <div class="cardP">
                                 <h3>Casa de la Hamaca</h3>
-                                <p style="text-align: center;">Informational website for a small business that showcases available products, along with an administrative section for product management. Developed by myself as a Full Stack developer using .NET, Azure, SQL, and Blob Storage for image handling.</p>
+                                <p style="text-align: center;">
+                                    An informational website for a small business that showcases available products and includes an admin area for product management.
+                                    Built by me as a FullStack developer using .NET, Azure, SQL, and Blob Storage for image management.
+                                </p>
                                 <a href="https://casadehamaca.azurewebsites.net" target="_blank" style="font-weight: bold; color: rgb(5, 5, 145);">Visit</a>
                                 <div class="imgs-container">
-                                    <img src="img/cdlh.jpg" alt="casadehamaca Image">
+                                    <img src="img/cdlh.jpg" alt="Casa de la Hamaca">
                                 </div>
                             </div>
                         </div>
-            
-                        <!-- Project 1: Facebook Clone -->
+
                         <div class="cardPortfolio active">
                             <div class="cardP">
                                 <h3>Facebook Clone</h3>
-                                <p style="text-align: center;">Website that simulates Facebook, using Node.js along with Express for the backend. It includes functionalities such as jsonwebtoken for user authentication, bcrypt for password encryption, and stores everything in MongoDB databases. It features a posts section, creating posts, likes, comments, replies, as well as a commerce section and user profile editing, all managed through APIs that handle user requests.</p>
+                                <p style="text-align: center;">
+                                    A Facebook-inspired web app built with Node.js and Express for the backend, using JWT for authentication and bcrypt for password encryption. Data is stored in MongoDB.
+                                    <br><br>
+                                    Includes posts, creating publications, likes, comments, replies, a marketplace section, and user profile editing—handled through APIs that process user requests.
+                                </p>
                                 <a href="https://faceclone-beta.vercel.app/" target="_blank" style="font-weight: bold; color: rgb(5, 5, 145);">Visit</a>
                                 <div class="imgs-container">
-                                    <img src="img/face/face1.png" alt="Facebook Clone Image">
+                                    <img src="img/face/face1.png" alt="Facebook Clone">
                                 </div>
                             </div>
                         </div>
-            
-                        <!-- Project 2: Veterinaria El Ganadero -->
-                        
                     </div>
             
-                    <!-- Right arrow -->
                     <button class="carousel-control-next" onclick="nextProject()">&#10095;</button>
                 </div>
             </section>
@@ -210,74 +231,73 @@
             <section class="Contacto" id="contacto">
                 <div class="about">
                     <h5>Contact</h5>
-                </div>
-                
-                <h2 style="font-weight: bold; text-align: center;">You can contact me in the following ways</h2>
+                </div>                
+                <h2 style="font-weight: bold; text-align: center;">You can contact me through the following channels</h2>
                 <p style="font-weight: bold; text-align: center; font-size: 30px;">Phone: +506 64856905</p>
+
                 <div class="grid_redes">
                     <div class="card2">
-                        <a href="https://github.com/JoseBrenesM" target="_blank"><img src="img/icons/github.svg" alt="github" loading="lazy" class="gitimg"></a>
+                        <a href="https://github.com/JoseBrenesM" target="_blank"><img src="img/icons/github.svg" alt="GitHub" loading="lazy" class="gitimg"></a>
                     </div>
                     <div class="card2">
-                        <a href="https://www.linkedin.com/in/jos%C3%A9-a-8a90a8273" target="_blank"><img src="img/icons/linkedin.svg" alt="linkedin" loading="lazy" class="inimg"></a>
+                        <a href="https://www.linkedin.com/in/jos%C3%A9-a-8a90a8273" target="_blank"><img src="img/icons/linkedin.svg" alt="LinkedIn" loading="lazy" class="inimg"></a>
                     </div>
                     <div class="card2">
-                        <a href="mailto:joseandresbrenesmontero@gmail.com" target="_blank"><img src="img/icons/gmail.svg" alt="gmail" loading="lazy" class="gimg"></a>
+                        <a href="mailto:trabajo.joseb@gmail.com" target="_blank"><img src="img/icons/gmail.svg" alt="Email" loading="lazy" class="gimg"></a>
                     </div>
                 </div>        
-        
             </section>
             <br>
         </main>
-       <br>
-            <footer class="site-footer">
-                <div class="footer-container">
-                    <p class="footer-text">Jose Brenes's Page</p>
-                    <p class="footer-text">All rights reserved</p>
-                    <p class="footer-text">2024</p>
-                </div>
-            </footer>
+
+        <br>
+        <footer class="site-footer">
+            <div class="footer-container">
+                <p class="footer-text">José Brenes Website</p>
+                <p class="footer-text">All rights reserved</p>
+                <p class="footer-text">2025</p>
+            </div>
+        </footer>
 
     </div>
-    
+
     <script>
         function changeLanguage() {
             var language = document.getElementById("language-selector").value;
-            window.location.href = "index"  + ".html";
+            window.location.href = "index_" + language + ".html";
         }
     </script>
+
     <script src="scripts/bubble.js"></script>
     <script src="scripts/contact.js"></script>
     <script src="scripts/model.js"></script>
+
     <script>
-        let currentProjectIndex = 0;
+      let currentProjectIndex = 0;
+
+      function showProject(index) {
+          const projects = document.querySelectorAll('.cardPortfolio');
+          if (index >= projects.length) currentProjectIndex = 0;
+          if (index < 0) currentProjectIndex = projects.length - 1;
+
+          projects.forEach(project => project.classList.remove('active'));
+          projects[currentProjectIndex].classList.add('active');
+      }
+
+      function nextProject() {
+          currentProjectIndex++;
+          showProject(currentProjectIndex);
+      }
+
+      function prevProject() {
+          currentProjectIndex--;
+          showProject(currentProjectIndex);
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+          showProject(currentProjectIndex);
+      });
+    </script>
   
-  function showProject(index) {
-      const projects = document.querySelectorAll('.cardPortfolio');
-      if (index >= projects.length) currentProjectIndex = 0;
-      if (index < 0) currentProjectIndex = projects.length - 1;
-  
-      // Oculta todas las tarjetas
-      projects.forEach(project => project.classList.remove('active'));
-  
-      // Muestra la tarjeta actual
-      projects[currentProjectIndex].classList.add('active');
-  }
-  
-  function nextProject() {
-      currentProjectIndex++;
-      showProject(currentProjectIndex);
-  }
-  
-  function prevProject() {
-      currentProjectIndex--;
-      showProject(currentProjectIndex);
-  }
-  
-  // Inicializar el carrusel
-  document.addEventListener('DOMContentLoaded', () => {
-      showProject(currentProjectIndex);
-  });
-      </script>
 </body>
 </html>
