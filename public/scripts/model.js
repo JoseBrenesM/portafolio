@@ -11,7 +11,7 @@ function openModal3() {
     modal.style.display = "block";
 }
 function openModal4() {
-    var modal = document.getElementById("myModal3");
+    var modal = document.getElementById("myModal4");
     modal.style.display = "block";
 }
 
@@ -29,6 +29,6 @@ function closeModal3() {
     modal.style.display = "none";
 }
 function closeModal4() {
-    var modal = document.getElementById("myModal3");
+    var modal = document.getElementById("myModal4");
     modal.style.display = "none";
 }
