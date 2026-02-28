@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <link href="css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <title>Portfolio</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <title>Portfolio | José Brenes</title>
 </head>
+
 <body>
     <canvas id="lamp-anim" class="lamp-anim" width="300px" height="100px"></canvas>
+
     <div class="container">
         <header>
             <nav class="navegacion">
                 <ul>
                     <li><a href="#inicio" class="nav_active">Home</a></li>
+                    <li><a href="#acerca">About Me</a></li>
                     <li><a href="#portafolio" class="no_active">Portfolio</a></li>
                     <li><a href="#contacto" class="no_active">Contact</a></li>
                     <li>
@@ -26,278 +33,293 @@
                                 <option value="es">Español</option>
                                 <option value="en" selected>English</option>
                             </select>
-                        </div>        
+                        </div>
                     </li>
                 </ul>
             </nav>
         </header>
+
         <main>
-            
-            <section class="Inicio" id="inicio" style="margin: 0;">
-                <section class="welcome-section">
+
+            <section id="inicio">
+                <div class="welcome-section">
                     <div class="welcome-content">
-                        <h1>Welcome</h1>
-                        <p>Hi! I'm José Andrés Brenes. This is my personal website, where you can learn more about me and explore some of the projects I’ve built.</p>
-                        <p>If you’d like to share feedback or send me a message, feel free to <a href="#contacto" style="text-decoration: none; font-weight: bold; color: #000;">contact me</a>.</p>
+                        <h1>Hi, I'm<br>José Brenes</h1>
+                        <p>Computer Systems Engineer and FullStack Developer. I specialize in building modern, scalable,
+                            and robust web applications with .NET or Node.js backends.</p>
+                        <p>If you have any feedback or want to get in touch, feel free to <a
+                                href="#contacto"><strong>contact me</strong></a>.</p>
                     </div>
                     <div class="welcome-image">
                         <img src="img/icons/welcome.webp" alt="Welcome">
                     </div>
-                </section>
-                
-                <section>
-                    <div class="about">
-                        <h5>About Me</h5>
-                    </div>
-                    <div class="grid-container">
-                        
-                        <div class="card myinfo">
-                            <h1>Profile</h1>
-                            <p>
-                                My name is José Andrés Brenes, I’m 22 years old, and I’m a Computer Systems Engineer with experience in backend development, REST API design and integration, and relational database management. I have built services and functional solutions using .NET and Node.js, and I also have experience in technical support and system operations.
-                                <br><br>
-                                I adapt easily to different areas of IT—software development, databases, specialized support, and quality assurance—always focused on delivering clean, reliable, and maintainable solutions.
-                            </p>
-                        </div>
-
-                        <div class="card education">
-                            <h2>Education</h2>
-                            <p>Bachelor’s Degree in Computer Systems Engineering — Universidad Fidélitas (2021–2025)</p>
-                            <button onclick="openModal4()">View certificate</button>
-                            <p>High School Diploma — San Luis Gonzaga High School (2016–2020)</p>
-                            <button onclick="openModal()">View certificate</button>
-                            <hr>
-                            
-                            <div class="extratitles">
-                                <p style="font-weight: bold; text-align: center; margin-bottom: 10px;">Additional Certifications</p>
-                                <ul style="list-style-type: none; padding: 0;">
-                                    <li style="margin-bottom: 10px;">
-                                        <p style="margin: 0;">Scrum</p>
-                                        <button onclick="openModal2()" style="width: 100%;">View certificate</button>
-                                    </li>
-                                    <li style="margin-bottom: 10px;">
-                                        <p style="margin: 0;">CCNA v7</p>
-                                        <button onclick="openModal3()" style="width: 100%;">View certificate</button>
-                                    </li>
-                                </ul>
-                                <br>
-                            </div>
-                        </div>
-
-                        <div id="myModal3" class="modal">
-                            <div class="modal-content">
-                                <span class="close" onclick="closeModal3()">&times;</span>
-                                <h2>Certificate</h2>
-                                <img src="img/titles/CCNA.png" alt="Certificate" style="width: 50%; height: 50%;">
-                            </div>
-                        </div>
-
-                        <div id="myModal2" class="modal">
-                            <div class="modal-content">
-                                <span class="close" onclick="closeModal2()">&times;</span>
-                                <h2>Certificate</h2>
-                                <img src="img/titles/SCRUM.png" alt="Certificate" style="width: 50%; height: 50%;">
-                            </div>
-                        </div>
-
-                        <div id="myModal" class="modal">
-                            <div class="modal-content">
-                                <span class="close" onclick="closeModal()">&times;</span>
-                                <h2>Certificate</h2>
-                                <img src="img/titles/BEM.jpg" alt="Certificate" style="width: 50%; height: 50%;">
-                            </div>
-                        </div>
-
-                        <div id="myModal4" class="modal">
-                            <div class="modal-content">
-                                <span class="close" onclick="closeModal4()">&times;</span>
-                                <h2>Certificate</h2>
-                                <img src="img/titles/uni.jpg" alt="Certificate" style="width: 50%; height: 50%;">
-                            </div>
-                        </div>
-
-                        <div class="card soft_skills">
-                            <h3>Soft Skills</h3>
-                            <p>
-                                I believe soft skills are just as important as technical skills. They shape how we communicate, collaborate, and solve problems—so here are a few qualities that represent me.
-                            </p>
-                            <ul>
-                                <li>Responsible</li>
-                                <li>Creativity</li>
-                                <li>Leadership</li>
-                                <li>Teamwork</li>
-                                <li>Communication</li>
-                            </ul>
-
-                            <p style="font-weight: bold; text-align: center;">Additional Skills</p>
-                            <ul>
-                                <li>Git / GitHub</li>
-                                <li>Typing</li>
-                                <li>Computer Maintenance</li>
-                            </ul>
-                        </div>
-
-                        <div class="card language">
-                            <h4>Programming Skills</h4>
-                            <div class="psp">
-                                <p>Frontend</p>
-                                <div class="psf_img">
-                                    <img src="img/icons/html.svg" alt="HTML" loading="lazy">
-                                    <img src="img/icons/css.svg" alt="CSS" loading="lazy">
-                                    <img src="img/icons/js.svg" alt="JavaScript" loading="lazy">
-                                 </div>
-
-                                <p>Backend</p>
-                                <div class="psf_img">
-                                    <img src="img/icons/net.png" alt=".NET" loading="lazy">
-                                    <img src="img/icons/node.svg" alt="Node.js" loading="lazy">
-                                    <img src="img/icons/php.svg" alt="PHP" loading="lazy">
-                                 </div>
-
-                                <p>Database</p>
-                                <div class="psf_img">
-                                    <img src="img/icons/mongo.svg" alt="MongoDB" loading="lazy">
-                                    <img src="img/icons/sql.svg" alt="SQL" loading="lazy">
-                                    <img src="img/icons/firebase-svgrepo-com.svg" alt="Firebase" loading="lazy">
-                                 </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
+                </div>
             </section>
 
-            <section class="portafolio" id="portafolio">
-                <div class="about"><h5>Welcome to My Portfolio</h5></div>
-                <div class="p-data" style="text-align: center;">
-                    <p>Here are some of my most recent projects, along with a brief description of each one.</p>
+            <section id="acerca">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Learn more about my profile, skills, and both academic and professional
+                    experience.</p>
+
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Professional Profile</h3>
+                        <p>My name is <strong>José Andrés Brenes</strong>, I am 22 years old and a Software
+                            Engineer.<br><br>I have experience in backend development, designing and integrating REST
+                            APIs, and relational database management.<br><br>I've built robust services using .NET and
+                            Node.js, and adapt quickly to specialized IT areas (system ops, DBs, QA support), always
+                            focusing on delivering clean and efficient solutions.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Formal Education</h3>
+                        <ul>
+                            <li>
+                                <div>
+                                    <strong>Bachelor's Degree</strong><br>
+                                    <span style="font-size: 0.9em; opacity: 0.8;">Computer Systems Engineering
+                                        (2021-2025)</span>
+                                </div>
+                                <button onclick="openModal4()" style="width: auto; margin:0; padding: 0.4rem 1rem;">View
+                                    Title</button>
+                            </li>
+                            <li>
+                                <div>
+                                    <strong>High School Diploma</strong><br>
+                                    <span style="font-size: 0.9em; opacity: 0.8;">San Luis Gonzaga High School
+                                        (2016-2020)</span>
+                                </div>
+                                <button onclick="openModal()" style="width: auto; margin:0; padding: 0.4rem 1rem;">View
+                                    Title</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Extra Certifications</h3>
+                        <ul>
+                            <li>
+                                <div>
+                                    <strong>Scrum Foundation</strong><br>
+                                    <span style="font-size: 0.9em; opacity: 0.8;">Agile Methodologies</span>
+                                </div>
+                                <button onclick="openModal2()" style="width: auto; margin:0; padding: 0.4rem 1rem;">View
+                                    Cert</button>
+                            </li>
+                            <li>
+                                <div>
+                                    <strong>CCNA v7</strong><br>
+                                    <span style="font-size: 0.9em; opacity: 0.8;">Cisco Networks & Telecom</span>
+                                </div>
+                                <button onclick="openModal3()" style="width: auto; margin:0; padding: 0.4rem 1rem;">View
+                                    Cert</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Practical Skills</h3>
+                        <p>I strongly believe that soft skills are just as important as technical skills for maintaining
+                            a healthy and productive workflow environment:</p>
+                        <ul>
+                            <li>Responsibility</li>
+                            <li>Empathetic Leadership</li>
+                            <li>Team Collaboration</li>
+                            <li>Assertive Communication</li>
+                            <li>Problem Solving</li>
+                        </ul>
+                    </div>
+
+                    <div class="card language">
+                        <h3>Frontend</h3>
+                        <p>Core technologies for modern user interfaces and user experiences (UI/UX).</p>
+                        <div class="psf_img">
+                            <img src="img/icons/html.svg" alt="HTML" title="HTML5" loading="lazy">
+                            <img src="img/icons/css.svg" alt="CSS" title="CSS3" loading="lazy">
+                            <img src="img/icons/js.svg" alt="JavaScript" title="JavaScript" loading="lazy">
+                            <img src="img/icons/bootstrap.svg" alt="Bootstrap" title="Bootstrap" loading="lazy">
+                            <img src="img/icons/tailwind.svg" alt="Tailwind CSS" title="Tailwind CSS" loading="lazy">
+                        </div>
+                    </div>
+
+                    <div class="card language">
+                        <h3>Backend & Database</h3>
+                        <p>Robust backend structures, scalable APIs, and secure data storage.</p>
+                        <div class="psf_img"
+                            style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+                            <div style="display: flex; gap: 1rem; justify-content: center;">
+                                <img src="img/icons/net.png" alt="net" title=".NET Core" loading="lazy">
+                                <img src="img/icons/node.svg" alt="node" title="Node.js" loading="lazy">
+                                <img src="img/icons/mongo.svg" alt="mongo" title="MongoDB" loading="lazy">
+                            </div>
+                            <div style="display: flex; gap: 1rem; justify-content: center;">
+                                <img src="img/icons/sql.svg" alt="sql" title="SQL Server" loading="lazy">
+                                <img src="img/icons/firebase-svgrepo-com.svg" alt="firebase" title="Firebase"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            
+
+                <div id="myModal3" class="modal">
+                    <div class="modal-content"><span class="close" onclick="closeModal3()">&times;</span>
+                        <h2>CCNA Certification</h2><img src="img/titles/CCNA.png" alt="Certificate">
+                    </div>
+                </div>
+                <div id="myModal2" class="modal">
+                    <div class="modal-content"><span class="close" onclick="closeModal2()">&times;</span>
+                        <h2>SCRUM Certification</h2><img src="img/titles/SCRUM.png" alt="Certificate">
+                    </div>
+                </div>
+                <div id="myModal" class="modal">
+                    <div class="modal-content"><span class="close" onclick="closeModal()">&times;</span>
+                        <h2>High School Diploma</h2><img src="img/titles/BEM.jpg" alt="Diploma">
+                    </div>
+                </div>
+                <div id="myModal4" class="modal">
+                    <div class="modal-content"><span class="close" onclick="closeModal4()">&times;</span>
+                        <h2>University Degree</h2><img src="img/titles/uni.jpg" alt="Degree">
+                    </div>
+                </div>
+            </section>
+
+            <section id="portafolio">
+                <h2 class="section-title">Project Portfolio</h2>
+                <p class="section-subtitle">Robust applications developed from start to finish ("FullStack").</p>
+
                 <div class="projects-carousel">
                     <button class="carousel-control-prev" onclick="prevProject()">&#10094;</button>
-            
+
                     <div class="carousel-inner">
-                        <div class="cardPortfolio">
+                        <div class="cardPortfolio active">
                             <div class="cardP">
                                 <h3>Veterinaria El Ganadero</h3>
-                                <p style="text-align: center;">
-                                    A full web application built as my final university project for a real company. Developed with .NET using a layered architecture, with a SQL database deployed on Azure, along with Azure App Service hosting.
-                                    <br><br>
-                                    Features include JWT-based authentication, role-based authorization, pet registration, appointment scheduling, and a point-of-sale module. Payments are integrated through the PayPal API to support card transactions.
-                                    <br><br>
-                                    This project was developed entirely by me as a FullStack developer.
-                                </p>
-                                <a href="https://veterinariaelganadero.azurewebsites.net" target="_blank" style="font-weight: bold; color: rgb(5, 5, 145);">Visit</a>
+                                <p>Web app built as a university capstone project for a real veterinary
+                                    clinic.<br>Created using a multi-layer .NET architecture, SQL Server, and Azure App
+                                    Services.<br><br>Features JWT authentication, role-based authorization (admin vs.
+                                    regular user), and a Point-of-Sale module integrated with the Paypal API.</p>
+                                <a href="https://veterinariaelganadero.azurewebsites.net" target="_blank"
+                                    class="btn">Visit Project</a>
                                 <div class="imgs-container">
-                                    <img src="img/vet/vete.jpg" alt="Veterinaria El Ganadero">
+                                    <img src="img/vet/vete.jpg" alt="Veterinaria El Ganadero Image">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="cardPortfolio active">
+                        <div class="cardPortfolio">
                             <div class="cardP">
                                 <h3>Casa de la Hamaca</h3>
-                                <p style="text-align: center;">
-                                    An informational website for a small business that showcases available products and includes an admin area for product management.
-                                    Built by me as a FullStack developer using .NET, Azure, SQL, and Blob Storage for image management.
-                                </p>
-                                <a href="https://casadehamaca.azurewebsites.net" target="_blank" style="font-weight: bold; color: rgb(5, 5, 145);">Visit</a>
+                                <p>Website for a local enterprise. It includes a public product catalog and an
+                                    administrative dashboard for inventory management.<br><br>Developed strictly as a
+                                    FullStack solution with .NET, Azure SQL, and Azure Blob Storage for handling product
+                                    image caching and storage.</p>
+                                <a href="https://casadehamaca.azurewebsites.net" target="_blank" class="btn">Visit
+                                    Project</a>
                                 <div class="imgs-container">
-                                    <img src="img/cdlh.jpg" alt="Casa de la Hamaca">
+                                    <img src="img/cdlh.jpg" alt="Casa de la Hamaca Image">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="cardPortfolio active">
+                        <div class="cardPortfolio">
                             <div class="cardP">
                                 <h3>Facebook Clone</h3>
-                                <p style="text-align: center;">
-                                    A Facebook-inspired web app built with Node.js and Express for the backend, using JWT for authentication and bcrypt for password encryption. Data is stored in MongoDB.
-                                    <br><br>
-                                    Includes posts, creating publications, likes, comments, replies, a marketplace section, and user profile editing—handled through APIs that process user requests.
-                                </p>
-                                <a href="https://faceclone-beta.vercel.app/" target="_blank" style="font-weight: bold; color: rgb(5, 5, 145);">Visit</a>
+                                <p>Structural simulation of a social network built heavily around Node.js, Express, and
+                                    MongoDB.<br><br>Employs bcrypt encryption, JWT authentication, post creation,
+                                    asynchronous handling of Likes and Comments, a Marketplace, all governed by
+                                    integrated REST APIs.</p>
+                                <a href="https://faceclone-beta.vercel.app/" target="_blank" class="btn">Visit
+                                    Project</a>
                                 <div class="imgs-container">
-                                    <img src="img/face/face1.png" alt="Facebook Clone">
+                                    <img src="img/face/face1.png" alt="Facebook Clone Image">
                                 </div>
                             </div>
                         </div>
                     </div>
-            
+
                     <button class="carousel-control-next" onclick="nextProject()">&#10095;</button>
                 </div>
             </section>
-            
-            <section class="Contacto" id="contacto">
-                <div class="about">
-                    <h5>Contact</h5>
-                </div>                
-                <h2 style="font-weight: bold; text-align: center;">You can contact me through the following channels</h2>
-                <p style="font-weight: bold; text-align: center; font-size: 30px;">Phone: +506 64856905</p>
+
+            <section id="contacto" class="Contacto">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-subtitle">Interested in collaborating or just checking out my work? Let's talk.</p>
+                <div class="contact-info">
+                    Mobile Phone / WhatsApp<br>
+                    <span style="font-weight: 400; font-size: 1.25rem;">+506 6485-6905</span>
+                </div>
 
                 <div class="grid_redes">
-                    <div class="card2">
-                        <a href="https://github.com/JoseBrenesM" target="_blank"><img src="img/icons/github.svg" alt="GitHub" loading="lazy" class="gitimg"></a>
-                    </div>
-                    <div class="card2">
-                        <a href="https://www.linkedin.com/in/jos%C3%A9-a-8a90a8273" target="_blank"><img src="img/icons/linkedin.svg" alt="LinkedIn" loading="lazy" class="inimg"></a>
-                    </div>
-                    <div class="card2">
-                        <a href="mailto:trabajo.joseb@gmail.com" target="_blank"><img src="img/icons/gmail.svg" alt="Email" loading="lazy" class="gimg"></a>
-                    </div>
-                </div>        
+                    <a href="https://github.com/JoseBrenesM" target="_blank" class="card2" title="GitHub">
+                        <img src="img/icons/github.svg" alt="github" loading="lazy">
+                    </a>
+                    <a href="https://www.linkedin.com/in/jos%C3%A9-a-8a90a8273" target="_blank" class="card2"
+                        title="LinkedIn">
+                        <img src="img/icons/linkedin.svg" alt="linkedin" loading="lazy">
+                    </a>
+                    <a href="mailto:trabajo.joseb@gmail.com" target="_blank" class="card2" title="Email">
+                        <img src="img/icons/gmail.svg" alt="gmail" loading="lazy">
+                    </a>
+                </div>
             </section>
-            <br>
+
         </main>
 
-        <br>
         <footer class="site-footer">
             <div class="footer-container">
-                <p class="footer-text">José Brenes Website</p>
-                <p class="footer-text">All rights reserved</p>
-                <p class="footer-text">2025</p>
+                <p class="footer-text">José Brenes Web Portfolio</p>
+                <p class="footer-text">&copy; 2025</p>
             </div>
         </footer>
 
     </div>
-
     <script>
         function changeLanguage() {
             var language = document.getElementById("language-selector").value;
-            window.location.href = "index_" + language + ".html";
+            if (language === 'es') {
+                window.location.href = "index.html";
+            }
         }
-    </script>
 
+        document.querySelectorAll('.navegacion a').forEach(link => {
+            link.addEventListener('click', function () {
+                document.querySelectorAll('.navegacion a').forEach(l => l.classList.remove('nav_active'));
+                this.classList.add('nav_active');
+            });
+        });
+    </script>
     <script src="scripts/bubble.js"></script>
     <script src="scripts/contact.js"></script>
     <script src="scripts/model.js"></script>
-
     <script>
-      let currentProjectIndex = 0;
+        let currentProjectIndex = 0;
 
-      function showProject(index) {
-          const projects = document.querySelectorAll('.cardPortfolio');
-          if (index >= projects.length) currentProjectIndex = 0;
-          if (index < 0) currentProjectIndex = projects.length - 1;
+        function showProject(index) {
+            const projects = document.querySelectorAll('.cardPortfolio');
+            if (index >= projects.length) currentProjectIndex = 0;
+            if (index < 0) currentProjectIndex = projects.length - 1;
 
-          projects.forEach(project => project.classList.remove('active'));
-          projects[currentProjectIndex].classList.add('active');
-      }
+            projects.forEach(project => {
+                project.classList.remove('active');
+                project.style.display = 'none';
+            });
 
-      function nextProject() {
-          currentProjectIndex++;
-          showProject(currentProjectIndex);
-      }
+            projects[currentProjectIndex].classList.add('active');
+            projects[currentProjectIndex].style.display = 'block';
+        }
 
-      function prevProject() {
-          currentProjectIndex--;
-          showProject(currentProjectIndex);
-      }
+        function nextProject() {
+            currentProjectIndex++;
+            showProject(currentProjectIndex);
+        }
 
-      document.addEventListener('DOMContentLoaded', () => {
-          showProject(currentProjectIndex);
-      });
+        function prevProject() {
+            currentProjectIndex--;
+            showProject(currentProjectIndex);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showProject(currentProjectIndex);
+        });
     </script>
-  
+
 </body>
+
 </html>
