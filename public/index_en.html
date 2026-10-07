@@ -11,13 +11,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <title>Portfolio | José Brenes</title>
 </head>
 
 <body>
-    <canvas id="lamp-anim" class="lamp-anim" width="300px" height="100px"></canvas>
 
     <div class="container">
         <header>
@@ -31,7 +30,7 @@
                     <li><a href="#contacto" class="no_active">Contact</a></li>
                     <li>
                         <div class="language-selector">
-                            <select id="language-selector" onchange="changeLanguage()">
+                            <select id="language-selector" aria-label="Language" onchange="changeLanguage()">
                                 <option value="es">Español</option>
                                 <option value="en" selected>English</option>
                             </select>
@@ -46,13 +45,26 @@
             <section id="inicio">
                 <div class="welcome-section">
                     <div class="welcome-content">
-                        <h1>Hi, I'm<br>José Brenes</h1>
+                        <h1><span class="hero-greeting">Hi, I'm</span>José Brenes</h1>
                         <p>I’m a full stack developer and Computer Systems Engineer. I build web applications, from the interface to the backend and data.</p>
                         <p><a href="#portafolio"><strong>Explore my projects</strong></a> or <a href="#contacto"><strong>get in touch</strong></a>.</p>
                     </div>
-                    <div class="welcome-image">
-                        <img src="img/icons/welcome.webp" alt="Welcome">
-                    </div>
+                    <figure class="architecture-map">
+<svg viewBox="0 0 520 440" role="img" aria-labelledby="map-title map-desc">
+<title id="map-title">From interface to data</title><desc id="map-desc">Abstract representation of full stack development: interface, services and data connected.</desc>
+<defs><pattern id="map-grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#DCE3E9"/></pattern><marker id="map-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 7 3.5 0 7" fill="none" stroke="#405FE8"/></marker></defs>
+<rect x="0" y="0" width="520" height="440" rx="20" fill="url(#map-grid)"/>
+<path d="M263 146H400V205M345 279V330H205" fill="none" stroke="#405FE8" stroke-width="2" marker-end="url(#map-arrow)"/>
+<rect x="24" y="32" width="270" height="170" rx="12" fill="#FFFFFF" stroke="#DCE3E9" stroke-width="1.5"/>
+<path d="M24 65H294" stroke="#DCE3E9"/><circle cx="42" cy="49" r="3" fill="#405FE8"/><circle cx="54" cy="49" r="3" fill="#DCE3E9"/><circle cx="66" cy="49" r="3" fill="#DCE3E9"/>
+<text x="44" y="98" font-size="18" font-weight="700" fill="#172533">Interface</text>
+<rect x="44" y="118" width="66" height="63" rx="5" fill="#E7EBFF"/><path d="M126 124H246M126 139H228M126 154H246" stroke="#DCE3E9" stroke-width="5" stroke-linecap="round"/><rect x="126" y="168" width="56" height="12" rx="3" fill="#405FE8"/>
+<rect x="270" y="211" width="222" height="104" rx="12" fill="#172533"/>
+<g stroke="#849CEB" stroke-width="2" fill="none"><path d="m293 242-7 7 7 7m19-14 7 7-7 7m-9-20-4 26"/></g>
+<text x="332" y="254" font-size="18" font-weight="700" fill="#FFFFFF">Services</text><text x="289" y="289" font-size="13" fill="#CBD5DF">API / business logic</text>
+<rect x="44" y="285" width="169" height="122" rx="12" fill="#FFFFFF" stroke="#DCE3E9" stroke-width="1.5"/>
+<g transform="translate(65 302)" stroke="#405FE8" stroke-width="1.5" fill="#E7EBFF"><ellipse cx="22" cy="8" rx="21" ry="7"/><path d="M1 8v30c0 9 42 9 42 0V8M1 22c0 9 42 9 42 0"/></g><text x="65" y="386" font-size="18" font-weight="700" fill="#172533">Data</text>
+</svg><figcaption>From interface to data. A full stack perspective.</figcaption></figure>
                 </div>
             </section>
 
@@ -74,7 +86,7 @@
                                 <p>University project for a real business, covering sales and access for administrators and users.</p>
                                 <p>JWT authentication and role-based permissions, with a point-of-sale module that accepts PayPal payments.</p>
                                 <p>Multi-layer .NET architecture, SQL Server and Azure App Services.</p>
-                                <a class="btn" href="https://veterinariaelganadero.azurewebsites.net" target="_blank" rel="noopener noreferrer">Visit project</a>
+                                <ul class="project-stack" aria-label="Project technologies"><li>.NET</li><li>SQL Server</li><li>Azure</li><li>JWT</li><li>PayPal</li></ul><a class="btn" href="https://veterinariaelganadero.azurewebsites.net" target="_blank" rel="noopener noreferrer">Visit project</a>
                             </div>
                         </div>
                     </div>
@@ -97,7 +109,7 @@
                                 <h3>Casa de la Hamaca</h3>
                                 <p>Website for a small business, with a public product catalog and an inventory administration dashboard.</p>
                                 <p>The .NET application uses SQL Azure for data and Azure Blob Storage for product images.</p>
-                                <a class="btn" href="https://casadehamaca.azurewebsites.net" target="_blank" rel="noopener noreferrer">Visit project</a>
+                                <ul class="project-stack" aria-label="Project technologies"><li>.NET</li><li>SQL Azure</li><li>Blob Storage</li></ul><a class="btn" href="https://casadehamaca.azurewebsites.net" target="_blank" rel="noopener noreferrer">Visit project</a>
                             </div>
                         </div>
                     </div>
@@ -108,7 +120,7 @@
                                 <h3>Facebook Clone</h3>
                                 <p>Social network simulation with posts, likes, comments and a marketplace.</p>
                                 <p>The frontend connects to REST APIs built with Node.js and Express. MongoDB stores the data, JWT handles authentication and bcrypt hashes passwords.</p>
-                                <a class="btn" href="https://faceclone-beta.vercel.app/" target="_blank" rel="noopener noreferrer">Visit project</a>
+                                <ul class="project-stack" aria-label="Project technologies"><li>Node.js</li><li>Express</li><li>MongoDB</li><li>JWT</li><li>bcrypt</li></ul><a class="btn" href="https://faceclone-beta.vercel.app/" target="_blank" rel="noopener noreferrer">Visit project</a>
                             </div>
                         </div>
                     </div>
@@ -211,22 +223,22 @@
                     </div>
                 </div>
                 <div id="myModal3" class="modal">
-                    <div class="modal-content"><span class="close" onclick="closeModal3()">&times;</span>
+                    <div class="modal-content"><button type="button" class="close" aria-label="Close certificate" onclick="closeModal3()">&times;</button>
                         <h2>CCNAv7 course completion</h2><img src="img/titles/CCNA.png" alt="Certificate">
                     </div>
                 </div>
                 <div id="myModal2" class="modal">
-                    <div class="modal-content"><span class="close" onclick="closeModal2()">&times;</span>
+                    <div class="modal-content"><button type="button" class="close" aria-label="Close certificate" onclick="closeModal2()">&times;</button>
                         <h2>Scrum Fundamentals Certified</h2><img src="img/titles/SCRUM.png" alt="Certificate">
                     </div>
                 </div>
                 <div id="myModal" class="modal">
-                    <div class="modal-content"><span class="close" onclick="closeModal()">&times;</span>
+                    <div class="modal-content"><button type="button" class="close" aria-label="Close certificate" onclick="closeModal()">&times;</button>
                         <h2>High School Diploma</h2><img src="img/titles/BEM.jpg" alt="Diploma">
                     </div>
                 </div>
                 <div id="myModal4" class="modal">
-                    <div class="modal-content"><span class="close" onclick="closeModal4()">&times;</span>
+                    <div class="modal-content"><button type="button" class="close" aria-label="Close certificate" onclick="closeModal4()">&times;</button>
                         <h2>University Degree</h2><img src="img/titles/uni.jpg" alt="Degree">
                     </div>
                 </div>
@@ -234,23 +246,12 @@
 
             <section id="contacto" class="Contacto">
                 <h2 class="section-title">Contact</h2>
-                <p class="section-subtitle">Want to know more about my work or discuss a project? Get in touch.</p>
-                <div class="contact-info">
-                    Mobile Phone / WhatsApp<br>
-                    <span style="font-weight: 400; font-size: 1.25rem;">+506 6485-6905</span>
-                </div>
-
-                <div class="grid_redes">
-                    <a href="https://github.com/JoseBrenesM" target="_blank" class="card2" title="GitHub">
-                        <img src="img/icons/github.svg" alt="github" loading="lazy">
-                    </a>
-                    <a href="https://www.linkedin.com/in/jos%C3%A9-a-8a90a8273" target="_blank" class="card2"
-                        title="LinkedIn">
-                        <img src="img/icons/linkedin.svg" alt="linkedin" loading="lazy">
-                    </a>
-                    <a href="mailto:trabajo.joseb@gmail.com" target="_blank" class="card2" title="Email">
-                        <img src="img/icons/gmail.svg" alt="gmail" loading="lazy">
-                    </a>
+                <p class="section-subtitle">Want to talk about development, automation or an idea? You can reach me here.</p>
+                <a class="contact-primary" href="mailto:trabajo.joseb@gmail.com"><img class="contact-mail-icon" src="img/icons/gmail.svg" alt="" width="20" height="20"><span>Contact</span></a>
+                <div class="contact-links" aria-label="Other contact options">
+                    <a href="https://wa.me/50664856905" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.7a8.7 8.7 0 0 1-12.9 7.6L3 20.5l1.3-4.4a8.7 8.7 0 1 1 16.2-4.4Z"/><path d="M8.2 7.7c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.5.4l.8 1.9c.1.2.1.4-.1.6l-.6.7c-.2.2-.2.4 0 .7.5.9 1.3 1.7 2.2 2.2.3.2.5.2.7 0l.8-.9c.2-.2.4-.2.6-.1l1.8.9c.3.1.4.3.4.5 0 .3-.2 1.2-.7 1.6-.5.5-1.1.7-1.8.6-1-.1-2.2-.6-3.7-1.9-1.8-1.6-3-3.5-3.2-4.8-.2-.9.1-1.5.6-1.9Z"/></svg><span>WhatsApp</span></a>
+                    <a href="https://www.linkedin.com/in/jos%C3%A9-a-8a90a8273" target="_blank" rel="noopener noreferrer"><img src="img/icons/linkedin.svg" alt="" loading="lazy"><span>LinkedIn</span></a>
+                    <a href="https://github.com/JoseBrenesM" target="_blank" rel="noopener noreferrer"><img src="img/icons/github.svg" alt="" loading="lazy"><span>GitHub</span></a>
                 </div>
             </section>
 
@@ -280,7 +281,7 @@
             });
         });
     </script>
-    <script src="scripts/bubble.js"></script>
+
     <script src="scripts/contact.js"></script>
     <script src="scripts/model.js"></script>
     <script src="scripts/projects.js"></script>
