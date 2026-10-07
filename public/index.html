@@ -24,8 +24,10 @@
             <nav class="navegacion">
                 <ul>
                     <li><a href="#inicio" class="nav_active">Inicio</a></li>
-                    <li><a href="#acerca">Acerca de mi</a></li>
-                    <li><a href="#portafolio" class="no_active">Portafolio</a></li>
+                    <li><a href="#portafolio">Proyectos</a></li>
+                    <li><a href="#acerca">Perfil</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#formacion">Formación</a></li>
                     <li><a href="#contacto" class="no_active">Contacto</a></li>
                     <li>
                         <div class="language-selector">
@@ -45,10 +47,8 @@
                 <div class="welcome-section">
                     <div class="welcome-content">
                         <h1>Hola, soy<br>José Brenes</h1>
-                        <p>Ingeniero en Sistemas de Computación y Desarrollador FullStack. Me especializo en crear
-                            aplicaciones web modernas, robustas y escalables con backend en .NET o Node.js.</p>
-                        <p>Cualquier sugerencia o mensaje que me quieras dejar, me puedes <a
-                                href="#contacto"><strong>contactar</strong></a>.</p>
+                        <p>Soy desarrollador full stack e Ingeniero en Sistemas de Computación. Desarrollo aplicaciones web, desde la interfaz hasta el backend y los datos.</p>
+                        <p><a href="#portafolio"><strong>Conoce mis proyectos</strong></a> o <a href="#contacto"><strong>contacta conmigo</strong></a>.</p>
                     </div>
                     <div class="welcome-image">
                         <img src="img/icons/welcome.webp" alt="Bienvenido">
@@ -56,21 +56,116 @@
                 </div>
             </section>
 
-            <section id="acerca">
-                <h2 class="section-title">Acerca de mi</h2>
-                <p class="section-subtitle">Conoce mi perfil, habilidades y experiencia profesional y académica.</p>
-
-                <div class="grid-container">
-
-                    <div class="card">
-                        <h3>Perfil Profesional</h3>
-                        <p>Mi nombre es <strong>José Andrés Brenes</strong>, tengo 22 años y soy Ingeniero en
-                            Sistemas.<br><br>Cuento con experiencia en desarrollo backend, diseño e integración de APIs
-                            REST, y gestión de bases de datos relacionales.<br><br>He trabajado con .NET y Node.js en la
-                            construcción de servicios, adaptándome con facilidad a distintas áreas de TI (desarrollo,
-                            BD, soporte) enfocado siempre en entregar soluciones eficientes y limpias.</p>
+            <section id="portafolio">
+                <h2 class="section-title">Proyectos</h2>
+                <p class="section-subtitle">Aplicaciones web y mi sitio de trabajos independientes.</p>
+                <div class="project-selector">
+                    <div class="project-tabs" role="tablist" aria-label="Selecciona un proyecto">
+                        <button type="button" role="tab" id="tab-proyecto-veterinaria" aria-controls="proyecto-veterinaria" aria-selected="true" tabindex="0">Veterinaria El Ganadero</button>
+                        <button type="button" role="tab" id="tab-proyecto-brn" aria-controls="proyecto-brn" aria-selected="false" tabindex="-1">BRN Solutions</button>
+                        <button type="button" role="tab" id="tab-proyecto-hamaca" aria-controls="proyecto-hamaca" aria-selected="false" tabindex="-1">Casa de la Hamaca</button>
+                        <button type="button" role="tab" id="tab-proyecto-facebook" aria-controls="proyecto-facebook" aria-selected="false" tabindex="-1">Facebook Clone</button>
                     </div>
+                    <div class="project-panel" role="tabpanel" id="proyecto-veterinaria" aria-labelledby="tab-proyecto-veterinaria" tabindex="0">
+                        <div class="project-detail">
+                            <figure class="project-image"><img src="img/vet/vete.jpg" alt="Captura de Veterinaria El Ganadero"></figure>
+                            <div class="project-copy">
+                                <h3>Veterinaria El Ganadero</h3>
+                                <p>Proyecto universitario para una empresa real, con gestión de ventas y acceso para administradores y usuarios.</p>
+                                <p>Incluye autenticación con JWT, permisos por rol y un punto de venta con pagos mediante PayPal.</p>
+                                <p>Desarrollado con .NET en arquitectura multicapas, SQL Server y Azure App Services.</p>
+                                <a class="btn" href="https://veterinariaelganadero.azurewebsites.net" target="_blank" rel="noopener noreferrer">Visitar proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-panel" role="tabpanel" id="proyecto-brn" aria-labelledby="tab-proyecto-brn" tabindex="0" hidden>
+                        <div class="project-detail">
+                            <figure class="project-image"><img src="img/brn-solutions.jpg" alt="Captura de BRN Solutions"></figure>
+                            <div class="project-copy">
+                                <h3>BRN Solutions</h3>
+                                <p>Mi sitio para presentar las soluciones digitales que ofrezco en mis trabajos independientes.</p>
+                                <p>Permite conocer los servicios, consultar el proceso de trabajo y contactar por WhatsApp.</p>
+                                <p>Mi trabajo independiente también incluye automatizaciones con n8n y APIs de terceros, procesamiento de información, prototipos web y una herramienta con Gmail API, OAuth2 y Google Apps Script.</p>
+                                <a class="btn" href="https://brnsolution.vercel.app/" target="_blank" rel="noopener noreferrer">Visitar proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-panel" role="tabpanel" id="proyecto-hamaca" aria-labelledby="tab-proyecto-hamaca" tabindex="0" hidden>
+                        <div class="project-detail">
+                            <figure class="project-image"><img src="img/cdlh.jpg" alt="Captura de Casa de la Hamaca"></figure>
+                            <div class="project-copy">
+                                <h3>Casa de la Hamaca</h3>
+                                <p>Sitio web para un emprendimiento, con catálogo público de productos y un panel administrativo para gestionar inventario.</p>
+                                <p>La aplicación en .NET utiliza SQL Azure para los datos y Azure Blob Storage para las imágenes de productos.</p>
+                                <a class="btn" href="https://casadehamaca.azurewebsites.net" target="_blank" rel="noopener noreferrer">Visitar proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-panel" role="tabpanel" id="proyecto-facebook" aria-labelledby="tab-proyecto-facebook" tabindex="0" hidden>
+                        <div class="project-detail">
+                            <figure class="project-image"><img src="img/face/face1.png" alt="Captura de Facebook Clone"></figure>
+                            <div class="project-copy">
+                                <h3>Facebook Clone</h3>
+                                <p>Simulación de red social con publicaciones, likes, comentarios y un marketplace.</p>
+                                <p>El frontend se conecta a APIs REST desarrolladas con Node.js y Express. MongoDB almacena los datos, JWT gestiona la autenticación y bcrypt realiza el hashing de contraseñas.</p>
+                                <a class="btn" href="https://faceclone-beta.vercel.app/" target="_blank" rel="noopener noreferrer">Visitar proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <section id="acerca">
+                <h2 class="section-title">Perfil y capacidades</h2>
+                <div class="profile-layout">
+                    <div class="profile-intro">
+                        <h3>José Andrés Brenes</h3>
+                        <p class="profile-context">Cartago, Costa Rica<br>Español: nativo · Inglés: B2</p>
+                        <p>En Veterinaria El Ganadero, Casa de la Hamaca y Facebook Clone me encargué por mi cuenta de todo el proceso: planificación, documentación, backend, base de datos y frontend.</p>
+                        <div class="profile-technologies" aria-label="Tecnologías">
+                            <div class="technology-group" role="group" aria-label="Frontend"><img src="img/icons/html.svg" alt="HTML5" title="HTML5" loading="lazy"><img src="img/icons/css.svg" alt="CSS3" title="CSS3" loading="lazy"><img src="img/icons/js.svg" alt="JavaScript" title="JavaScript" loading="lazy"><img src="img/icons/react.svg" alt="React" title="React" loading="lazy"></div>
+                            <div class="technology-group" role="group" aria-label="Backend y bases de datos"><img src="img/icons/net.png" alt=".NET" title=".NET" loading="lazy"><img src="img/icons/node.svg" alt="Node.js" title="Node.js" loading="lazy"><img src="img/icons/sql.svg" alt="SQL Server" title="SQL Server" loading="lazy"><img src="img/icons/mongo.svg" alt="MongoDB" title="MongoDB" loading="lazy"></div>
+                        </div>
+                    </div>
+                    <dl class="capability-grid">
+                        <div class="capability-block"><dt><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 9v11"/></svg><span>Interfaces</span></dt><dd>Desarrollo interfaces web para consultar información, gestionar tareas e interactuar con contenido.</dd></div>
+                        <div class="capability-block"><dt><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg><span>Backend y datos</span></dt><dd>Construyo servicios y APIs con autenticación, permisos y gestión de datos.</dd></div>
+                        <div class="capability-block"><dt><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 16H6a4 4 0 0 1-.5-8A6.5 6.5 0 0 1 18 7a4.5 4.5 0 0 1 0 9h-2M12 21V11m-4 4 4-4 4 4"/></svg><span>Integraciones y despliegue</span></dt><dd>Conecto servicios externos, pasarelas de pago y almacenamiento, y despliego aplicaciones web en la nube.</dd></div>
+                        <div class="capability-block"><dt><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="16" height="13" rx="3"/><path d="M12 6V3M9 12h.01M15 12h.01M9 16h6M1 11v4m22-4v4"/></svg><span>IA y automatización</span></dt><dd>Integro asistentes conversacionales y automatizaciones con IA para atender consultas, gestionar pedidos y trabajar con información del negocio.</dd></div>
+                    </dl>
+                </div>
+                <details class="tools-disclosure"><summary>Herramientas técnicas</summary><dl class="technical-tools">
+                    <div><dt>Backend y arquitectura</dt><dd>C#, ASP.NET Core, Entity Framework, Dapper, MVC y arquitectura por capas.</dd></div>
+                    <div><dt>Desarrollo y coordinación</dt><dd>Git, GitHub, Postman, Swagger, Jira y Excel.</dd></div>
+                    <div><dt>Automatización y APIs</dt><dd>n8n, Google Apps Script, Gmail API y OAuth2.</dd></div>
+                </dl></details>
+            </section>
+
+            <section id="experiencia">
+                <h2 class="section-title">Experiencia</h2>
+                <div class="experience-list">
+                    <h3 class="experience-group-title">Desarrollo</h3>
+                    <div class="development-timeline">
+                    <article class="experience-entry">
+                        <div class="experience-heading"><h3>BRN Solutions</h3><p>Desarrollador de software independiente</p><p class="experience-date">Marzo 2026 – presente</p></div>
+                        <div class="experience-description"><p>Desarrollo sitios web y landing pages para pequeños negocios, junto con herramientas que automatizan el procesamiento de información. Mi trabajo independiente también incluye integración de APIs y prototipos web.</p></div>
+                    </article>
+                    <article class="experience-entry">
+                        <div class="experience-heading"><h3>Municipalidad de El Guarco</h3><p>Desarrollador de software · práctica profesional</p><p class="experience-date">Enero – abril 2025</p></div>
+                        <div class="experience-description"><p>Desarrollé de forma independiente un sistema institucional, desde el levantamiento de requerimientos hasta la implementación. Coordiné el alcance con la institución y me encargué del backend, la base de datos y el frontend.</p><p class="experience-note">Sistema institucional privado con acceso individual y distintos roles.</p></div>
+                    </article>
+                    <article class="experience-entry">
+                        <div class="experience-heading"><h3>PLECSYS</h3><p>Desarrollador full stack junior · proyecto temporal</p><p class="experience-date">Febrero – diciembre 2024</p></div>
+                        <div class="experience-description"><p>Corregí errores en aplicaciones, incorporé validaciones y mejoré consultas de datos. También di soporte al frontend como parte de un proyecto temporal full stack.</p></div>
+                    </article>
+                    </div>
+                    <div class="additional-experience"><h3>Experiencia adicional</h3><p class="experience-secondary"><strong>Servicios PSI</strong> · Analista y digitador de datos · Julio 2025 – febrero 2026. Revisión, validación y limpieza de registros, con Microsoft Office para organizar la información.</p></div>
+                </div>
+            </section>
+
+            <section id="formacion">
+                <h2 class="section-title">Formación y certificaciones</h2>
+                <div class="grid-container education-grid">
                     <div class="card">
                         <h3>Educación Formal</h3>
                         <ul>
@@ -94,80 +189,36 @@
                             </li>
                         </ul>
                     </div>
-
                     <div class="card">
-                        <h3>Certificaciones extra</h3>
+                        <h3>Cursos y certificaciones</h3>
                         <ul>
                             <li>
                                 <div>
-                                    <strong>Scrum Foundation</strong><br>
-                                    <span style="font-size: 0.9em; opacity: 0.8;">Metodologías Ágiles</span>
+                                    <strong>Scrum Fundamentals Certified</strong><br>
+                                    <span style="font-size: 0.9em; opacity: 0.8;">SCRUMstudy · 2022</span>
                                 </div>
                                 <button onclick="openModal2()" style="width: auto; margin:0; padding: 0.4rem 1rem;">Ver
                                     Título</button>
                             </li>
                             <li>
                                 <div>
-                                    <strong>CCNA v7</strong><br>
-                                    <span style="font-size: 0.9em; opacity: 0.8;">Redes y Telecomunicaciones
-                                        Cisco</span>
+                                    <strong>Curso CCNAv7</strong><br>
+                                    <span style="font-size: 0.9em; opacity: 0.8;">Switching, Routing and Wireless Essentials<br>Cisco Networking Academy · 2023</span>
                                 </div>
                                 <button onclick="openModal3()" style="width: auto; margin:0; padding: 0.4rem 1rem;">Ver
                                     Título</button>
                             </li>
                         </ul>
                     </div>
-
-                    <div class="card">
-                        <h3>Habilidades Prácticas</h3>
-                        <p>Creo fielmente que las habilidades blandas ("Soft Skills") son igual de importantes que las
-                            técnicas para un flujo de trabajo y ambiente sano:</p>
-                        <ul>
-                            <li>Responsabilidad</li>
-                            <li>Liderazgo empático</li>
-                            <li>Trabajo en equipo</li>
-                            <li>Comunicación asertiva</li>
-                            <li>Resolución de problemas</li>
-                        </ul>
-                    </div>
-                    <div class="card language">
-                        <h3>Frontend</h3>
-                        <p>Tecnologías principales para interfaces y experiencia de usuario (UI/UX).</p>
-                        <div class="psf_img">
-                            <img src="img/icons/html.svg" alt="html" title="HTML5" loading="lazy">
-                            <img src="img/icons/css.svg" alt="css" title="CSS3" loading="lazy">
-                            <img src="img/icons/js.svg" alt="js" title="JavaScript" loading="lazy">
-                            <img src="img/icons/bootstrap.svg" alt="bootstrap" title="Bootstrap" loading="lazy">
-                            <img src="img/icons/tailwind.svg" alt="tailwind" title="Tailwind CSS" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="card language">
-                        <h3>Backend & Base de Datos</h3>
-                        <p>Estructura sólida, escalabilidad, APIs y almacenamiento.</p>
-                        <div class="psf_img"
-                            style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
-                            <div style="display: flex; gap: 1rem; justify-content: center;">
-                                <img src="img/icons/net.png" alt="net" title=".NET Core" loading="lazy">
-                                <img src="img/icons/node.svg" alt="node" title="Node.js" loading="lazy">
-                                <img src="img/icons/mongo.svg" alt="mongo" title="MongoDB" loading="lazy">
-                            </div>
-                            <div style="display: flex; gap: 1rem; justify-content: center;">
-                                <img src="img/icons/sql.svg" alt="sql" title="SQL Server" loading="lazy">
-                                <img src="img/icons/firebase-svgrepo-com.svg" alt="firebase" title="Firebase"
-                                    loading="lazy">
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
                 <div id="myModal3" class="modal">
                     <div class="modal-content"><span class="close" onclick="closeModal3()">&times;</span>
-                        <h2>Certificación CCNA</h2><img src="img/titles/CCNA.png" alt="Título">
+                        <h2>Finalización del curso CCNAv7</h2><img src="img/titles/CCNA.png" alt="Título">
                     </div>
                 </div>
                 <div id="myModal2" class="modal">
                     <div class="modal-content"><span class="close" onclick="closeModal2()">&times;</span>
-                        <h2>Certificación SCRUM</h2><img src="img/titles/SCRUM.png" alt="Título">
+                        <h2>Scrum Fundamentals Certified</h2><img src="img/titles/SCRUM.png" alt="Título">
                     </div>
                 </div>
                 <div id="myModal" class="modal">
@@ -182,66 +233,9 @@
                 </div>
             </section>
 
-            <section id="portafolio">
-                <h2 class="section-title">Portafolio de Proyectos</h2>
-                <p class="section-subtitle">Aplicaciones robustas desarrolladas de inicio a fin como FullStack.</p>
-
-                <div class="projects-carousel">
-                    <button class="carousel-control-prev" onclick="prevProject()">&#10094;</button>
-
-                    <div class="carousel-inner">
-                        <div class="cardPortfolio active">
-                            <div class="cardP">
-                                <h3>Veterinaria El Ganadero</h3>
-                                <p>App Web realizada como trabajo universitario para una empresa real.<br>Creada con
-                                    .NET (estructura en multicapas), SQL Server y Azure App
-                                    Services.<br><br>Autenticación con JWT, autorización basada en roles (administrador
-                                    vs. usuarios) y punto de venta con pago mediante la API de Paypal.</p>
-                                <a href="https://veterinariaelganadero.azurewebsites.net" target="_blank"
-                                    class="btn">Visitar Proyecto</a>
-                                <div class="imgs-container">
-                                    <img src="img/vet/vete.jpg" alt="Veterinaria El Ganadero Image">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cardPortfolio">
-                            <div class="cardP">
-                                <h3>Casa de la Hamaca</h3>
-                                <p>Sitio web para un emprendimiento. Cuenta con catálogo público y panel administrativo
-                                    de gestión de inventario.<br><br>Desarrollada FullStack con .NET, SQL Azure y Azure
-                                    Blob Storage para el almacenamiento y caché de imágenes de productos.</p>
-                                <a href="https://casadehamaca.azurewebsites.net" target="_blank" class="btn">Visitar
-                                    Proyecto</a>
-                                <div class="imgs-container">
-                                    <img src="img/cdlh.jpg" alt="Casa de la Hamaca Image">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cardPortfolio">
-                            <div class="cardP">
-                                <h3>Facebook Clone</h3>
-                                <p>Simulación estructural de red social construida con Node.js, Express y
-                                    MongoDB.<br><br>Contraseñas encriptadas con bcrypt, JWT auth, creación de
-                                    publicaciones, manejo asíncrono de Likes y Comentarios, Marketplace, todo gobernado
-                                    por APIs REST integradas.</p>
-                                <a href="https://faceclone-beta.vercel.app/" target="_blank" class="btn">Visitar
-                                    Proyecto</a>
-                                <div class="imgs-container">
-                                    <img src="img/face/face1.png" alt="Facebook Clone Image">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="carousel-control-next" onclick="nextProject()">&#10095;</button>
-                </div>
-            </section>
-
             <section id="contacto" class="Contacto">
                 <h2 class="section-title">Contacto</h2>
-                <p class="section-subtitle">¿Interesado en colaborar o en conocer mi trabajo? Hablemos.</p>
+                <p class="section-subtitle">¿Quieres conocer más sobre mi trabajo o conversar sobre un proyecto? Contacta conmigo.</p>
                 <div class="contact-info">
                     Teléfono Móvil / WhatsApp<br>
                     <span style="font-weight: 400; font-size: 1.25rem;">+506 6485-6905</span>
@@ -266,7 +260,7 @@
         <footer class="site-footer">
             <div class="footer-container">
                 <p class="footer-text">Portafolio Web de José Brenes</p>
-                <p class="footer-text">&copy; 2025</p>
+                <p class="footer-text">&copy; <span data-current-year>2026</span></p>
             </div>
         </footer>
 
@@ -274,10 +268,11 @@
 
     <script>
         function changeLanguage() {
-            var language = document.getElementById("language-selector").value;
-            if (language === 'en') {
-                window.location.href = "index_en.html";
-            }
+            const language = document.getElementById("language-selector").value;
+            const destination = language === 'en' ? 'index_en.html' : 'index.html';
+            const target = new URL(destination, window.location.href);
+            target.hash = window.location.hash;
+            window.location.assign(target.href);
         }
         document.querySelectorAll('.navegacion a').forEach(link => {
             link.addEventListener('click', function () {
@@ -289,37 +284,9 @@
     <script src="scripts/bubble.js"></script>
     <script src="scripts/contact.js"></script>
     <script src="scripts/model.js"></script>
-    <script>
-        let currentProjectIndex = 0;
+    <script src="scripts/projects.js"></script>
+    <script src="scripts/site.js"></script>
 
-        function showProject(index) {
-            const projects = document.querySelectorAll('.cardPortfolio');
-            if (index >= projects.length) currentProjectIndex = 0;
-            if (index < 0) currentProjectIndex = projects.length - 1;
-
-            projects.forEach(project => {
-                project.classList.remove('active');
-                project.style.display = 'none';
-            });
-
-            projects[currentProjectIndex].classList.add('active');
-            projects[currentProjectIndex].style.display = 'block';
-        }
-
-        function nextProject() {
-            currentProjectIndex++;
-            showProject(currentProjectIndex);
-        }
-
-        function prevProject() {
-            currentProjectIndex--;
-            showProject(currentProjectIndex);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            showProject(currentProjectIndex);
-        });
-    </script>
 
 </body>
 

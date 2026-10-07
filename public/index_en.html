@@ -24,8 +24,10 @@
             <nav class="navegacion">
                 <ul>
                     <li><a href="#inicio" class="nav_active">Home</a></li>
-                    <li><a href="#acerca">About Me</a></li>
-                    <li><a href="#portafolio" class="no_active">Portfolio</a></li>
+                    <li><a href="#portafolio">Projects</a></li>
+                    <li><a href="#acerca">Profile</a></li>
+                    <li><a href="#experiencia">Experience</a></li>
+                    <li><a href="#formacion">Education</a></li>
                     <li><a href="#contacto" class="no_active">Contact</a></li>
                     <li>
                         <div class="language-selector">
@@ -45,10 +47,8 @@
                 <div class="welcome-section">
                     <div class="welcome-content">
                         <h1>Hi, I'm<br>José Brenes</h1>
-                        <p>Computer Systems Engineer and FullStack Developer. I specialize in building modern, scalable,
-                            and robust web applications with .NET or Node.js backends.</p>
-                        <p>If you have any feedback or want to get in touch, feel free to <a
-                                href="#contacto"><strong>contact me</strong></a>.</p>
+                        <p>I’m a full stack developer and Computer Systems Engineer. I build web applications, from the interface to the backend and data.</p>
+                        <p><a href="#portafolio"><strong>Explore my projects</strong></a> or <a href="#contacto"><strong>get in touch</strong></a>.</p>
                     </div>
                     <div class="welcome-image">
                         <img src="img/icons/welcome.webp" alt="Welcome">
@@ -56,28 +56,123 @@
                 </div>
             </section>
 
-            <section id="acerca">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Learn more about my profile, skills, and both academic and professional
-                    experience.</p>
-
-                <div class="grid-container">
-                    <div class="card">
-                        <h3>Professional Profile</h3>
-                        <p>My name is <strong>José Andrés Brenes</strong>, I am 22 years old and a Software
-                            Engineer.<br><br>I have experience in backend development, designing and integrating REST
-                            APIs, and relational database management.<br><br>I've built robust services using .NET and
-                            Node.js, and adapt quickly to specialized IT areas (system ops, DBs, QA support), always
-                            focusing on delivering clean and efficient solutions.</p>
+            <section id="portafolio">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-subtitle">Web applications and my site for independent work.</p>
+                <div class="project-selector">
+                    <div class="project-tabs" role="tablist" aria-label="Select a project">
+                        <button type="button" role="tab" id="tab-proyecto-veterinaria" aria-controls="proyecto-veterinaria" aria-selected="true" tabindex="0">Veterinaria El Ganadero</button>
+                        <button type="button" role="tab" id="tab-proyecto-brn" aria-controls="proyecto-brn" aria-selected="false" tabindex="-1">BRN Solutions</button>
+                        <button type="button" role="tab" id="tab-proyecto-hamaca" aria-controls="proyecto-hamaca" aria-selected="false" tabindex="-1">Casa de la Hamaca</button>
+                        <button type="button" role="tab" id="tab-proyecto-facebook" aria-controls="proyecto-facebook" aria-selected="false" tabindex="-1">Facebook Clone</button>
                     </div>
+                    <div class="project-panel" role="tabpanel" id="proyecto-veterinaria" aria-labelledby="tab-proyecto-veterinaria" tabindex="0">
+                        <div class="project-detail">
+                            <figure class="project-image"><img src="img/vet/vete.jpg" alt="Screenshot of Veterinaria El Ganadero"></figure>
+                            <div class="project-copy">
+                                <h3>Veterinaria El Ganadero</h3>
+                                <p>University project for a real business, covering sales and access for administrators and users.</p>
+                                <p>JWT authentication and role-based permissions, with a point-of-sale module that accepts PayPal payments.</p>
+                                <p>Multi-layer .NET architecture, SQL Server and Azure App Services.</p>
+                                <a class="btn" href="https://veterinariaelganadero.azurewebsites.net" target="_blank" rel="noopener noreferrer">Visit project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-panel" role="tabpanel" id="proyecto-brn" aria-labelledby="tab-proyecto-brn" tabindex="0" hidden>
+                        <div class="project-detail">
+                            <figure class="project-image"><img src="img/brn-solutions.jpg" alt="Screenshot of BRN Solutions"></figure>
+                            <div class="project-copy">
+                                <h3>BRN Solutions</h3>
+                                <p>My site for presenting the digital solutions I offer through my independent work.</p>
+                                <p>Visitors can explore the services, see the work process and get in touch through WhatsApp.</p>
+                                <p>My independent work also includes automation with n8n and third-party APIs, information processing, web prototypes and a tool built with Gmail API, OAuth2 and Google Apps Script.</p>
+                                <a class="btn" href="https://brnsolution.vercel.app/" target="_blank" rel="noopener noreferrer">Visit project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-panel" role="tabpanel" id="proyecto-hamaca" aria-labelledby="tab-proyecto-hamaca" tabindex="0" hidden>
+                        <div class="project-detail">
+                            <figure class="project-image"><img src="img/cdlh.jpg" alt="Screenshot of Casa de la Hamaca"></figure>
+                            <div class="project-copy">
+                                <h3>Casa de la Hamaca</h3>
+                                <p>Website for a small business, with a public product catalog and an inventory administration dashboard.</p>
+                                <p>The .NET application uses SQL Azure for data and Azure Blob Storage for product images.</p>
+                                <a class="btn" href="https://casadehamaca.azurewebsites.net" target="_blank" rel="noopener noreferrer">Visit project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-panel" role="tabpanel" id="proyecto-facebook" aria-labelledby="tab-proyecto-facebook" tabindex="0" hidden>
+                        <div class="project-detail">
+                            <figure class="project-image"><img src="img/face/face1.png" alt="Screenshot of Facebook Clone"></figure>
+                            <div class="project-copy">
+                                <h3>Facebook Clone</h3>
+                                <p>Social network simulation with posts, likes, comments and a marketplace.</p>
+                                <p>The frontend connects to REST APIs built with Node.js and Express. MongoDB stores the data, JWT handles authentication and bcrypt hashes passwords.</p>
+                                <a class="btn" href="https://faceclone-beta.vercel.app/" target="_blank" rel="noopener noreferrer">Visit project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="acerca">
+                <h2 class="section-title">Profile & capabilities</h2>
+                <div class="profile-layout">
+                    <div class="profile-intro">
+                        <h3>José Andrés Brenes</h3>
+                        <p class="profile-context">Cartago, Costa Rica<br>Spanish: native · English: B2</p>
+                        <p>In Veterinaria El Ganadero, Casa de la Hamaca and Facebook Clone, I handled the whole process myself: planning, documentation, backend, database and frontend.</p>
+                        <div class="profile-technologies" aria-label="Technologies">
+                            <div class="technology-group" role="group" aria-label="Frontend"><img src="img/icons/html.svg" alt="HTML5" title="HTML5" loading="lazy"><img src="img/icons/css.svg" alt="CSS3" title="CSS3" loading="lazy"><img src="img/icons/js.svg" alt="JavaScript" title="JavaScript" loading="lazy"><img src="img/icons/react.svg" alt="React" title="React" loading="lazy"></div>
+                            <div class="technology-group" role="group" aria-label="Backend and databases"><img src="img/icons/net.png" alt=".NET" title=".NET" loading="lazy"><img src="img/icons/node.svg" alt="Node.js" title="Node.js" loading="lazy"><img src="img/icons/sql.svg" alt="SQL Server" title="SQL Server" loading="lazy"><img src="img/icons/mongo.svg" alt="MongoDB" title="MongoDB" loading="lazy"></div>
+                        </div>
+                    </div>
+                    <dl class="capability-grid">
+                        <div class="capability-block"><dt><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 9v11"/></svg><span>Interfaces</span></dt><dd>I build web interfaces for browsing information, managing tasks and interacting with content.</dd></div>
+                        <div class="capability-block"><dt><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg><span>Backend & data</span></dt><dd>I develop services and APIs with authentication, permissions and data management.</dd></div>
+                        <div class="capability-block"><dt><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 16H6a4 4 0 0 1-.5-8A6.5 6.5 0 0 1 18 7a4.5 4.5 0 0 1 0 9h-2M12 21V11m-4 4 4-4 4 4"/></svg><span>Integrations & deployment</span></dt><dd>I connect external services, payment gateways and storage, and deploy web applications to the cloud.</dd></div>
+                        <div class="capability-block"><dt><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="6" width="16" height="13" rx="3"/><path d="M12 6V3M9 12h.01M15 12h.01M9 16h6M1 11v4m22-4v4"/></svg><span>AI & automation</span></dt><dd>I integrate conversational assistants and AI automations to answer questions, handle orders and work with business information.</dd></div>
+                    </dl>
+                </div>
+                <details class="tools-disclosure"><summary>Technical tools</summary><dl class="technical-tools">
+                    <div><dt>Backend & architecture</dt><dd>C#, ASP.NET Core, Entity Framework, Dapper, MVC and layered architecture.</dd></div>
+                    <div><dt>Development & coordination</dt><dd>Git, GitHub, Postman, Swagger, Jira and Excel.</dd></div>
+                    <div><dt>Automation & APIs</dt><dd>n8n, Google Apps Script, Gmail API and OAuth2.</dd></div>
+                </dl></details>
+            </section>
+
+            <section id="experiencia">
+                <h2 class="section-title">Experience</h2>
+                <div class="experience-list">
+                    <h3 class="experience-group-title">Development</h3>
+                    <div class="development-timeline">
+                    <article class="experience-entry">
+                        <div class="experience-heading"><h3>BRN Solutions</h3><p>Independent software developer</p><p class="experience-date">March 2026 – present</p></div>
+                        <div class="experience-description"><p>I develop websites and landing pages for small businesses, alongside tools that automate information processing. My independent work also includes API integrations and web prototypes.</p></div>
+                    </article>
+                    <article class="experience-entry">
+                        <div class="experience-heading"><h3>Municipalidad de El Guarco</h3><p>Software developer · professional internship</p><p class="experience-date">January – April 2025</p></div>
+                        <div class="experience-description"><p>I independently developed an institutional system, from gathering requirements to implementation. I coordinated its scope with the institution and handled the backend, database and frontend.</p><p class="experience-note">Private institutional system with individual logins and different roles.</p></div>
+                    </article>
+                    <article class="experience-entry">
+                        <div class="experience-heading"><h3>PLECSYS</h3><p>Junior full stack developer · temporary project</p><p class="experience-date">February – December 2024</p></div>
+                        <div class="experience-description"><p>I corrected application errors, added validation and improved database queries. I also supported the frontend as part of a temporary full stack project.</p></div>
+                    </article>
+                    </div>
+                    <div class="additional-experience"><h3>Additional experience</h3><p class="experience-secondary"><strong>Servicios PSI</strong> · Data analyst and data entry · July 2025 – February 2026. Record review, validation and cleaning, with Microsoft Office for organizing information.</p></div>
+                </div>
+            </section>
+
+            <section id="formacion">
+                <h2 class="section-title">Education & certifications</h2>
+                <div class="grid-container education-grid">
                     <div class="card">
                         <h3>Formal Education</h3>
                         <ul>
                             <li>
                                 <div>
                                     <strong>Bachelor's Degree</strong><br>
-                                    <span style="font-size: 0.9em; opacity: 0.8;">Computer Systems Engineering
-                                        (2021-2025)</span>
+                                    <span style="font-size: 0.9em; opacity: 0.8;">Computer Systems Engineering (Fidélitas, 2021-2025)</span>
                                 </div>
                                 <button onclick="openModal4()" style="width: auto; margin:0; padding: 0.4rem 1rem;">View
                                     Title</button>
@@ -94,78 +189,35 @@
                         </ul>
                     </div>
                     <div class="card">
-                        <h3>Extra Certifications</h3>
+                        <h3>Courses & certifications</h3>
                         <ul>
                             <li>
                                 <div>
-                                    <strong>Scrum Foundation</strong><br>
-                                    <span style="font-size: 0.9em; opacity: 0.8;">Agile Methodologies</span>
+                                    <strong>Scrum Fundamentals Certified</strong><br>
+                                    <span style="font-size: 0.9em; opacity: 0.8;">SCRUMstudy · 2022</span>
                                 </div>
                                 <button onclick="openModal2()" style="width: auto; margin:0; padding: 0.4rem 1rem;">View
                                     Cert</button>
                             </li>
                             <li>
                                 <div>
-                                    <strong>CCNA v7</strong><br>
-                                    <span style="font-size: 0.9em; opacity: 0.8;">Cisco Networks & Telecom</span>
+                                    <strong>CCNAv7 course</strong><br>
+                                    <span style="font-size: 0.9em; opacity: 0.8;">Switching, Routing and Wireless Essentials<br>Cisco Networking Academy · 2023</span>
                                 </div>
                                 <button onclick="openModal3()" style="width: auto; margin:0; padding: 0.4rem 1rem;">View
                                     Cert</button>
                             </li>
                         </ul>
                     </div>
-                    <div class="card">
-                        <h3>Practical Skills</h3>
-                        <p>I strongly believe that soft skills are just as important as technical skills for maintaining
-                            a healthy and productive workflow environment:</p>
-                        <ul>
-                            <li>Responsibility</li>
-                            <li>Empathetic Leadership</li>
-                            <li>Team Collaboration</li>
-                            <li>Assertive Communication</li>
-                            <li>Problem Solving</li>
-                        </ul>
-                    </div>
-
-                    <div class="card language">
-                        <h3>Frontend</h3>
-                        <p>Core technologies for modern user interfaces and user experiences (UI/UX).</p>
-                        <div class="psf_img">
-                            <img src="img/icons/html.svg" alt="HTML" title="HTML5" loading="lazy">
-                            <img src="img/icons/css.svg" alt="CSS" title="CSS3" loading="lazy">
-                            <img src="img/icons/js.svg" alt="JavaScript" title="JavaScript" loading="lazy">
-                            <img src="img/icons/bootstrap.svg" alt="Bootstrap" title="Bootstrap" loading="lazy">
-                            <img src="img/icons/tailwind.svg" alt="Tailwind CSS" title="Tailwind CSS" loading="lazy">
-                        </div>
-                    </div>
-
-                    <div class="card language">
-                        <h3>Backend & Database</h3>
-                        <p>Robust backend structures, scalable APIs, and secure data storage.</p>
-                        <div class="psf_img"
-                            style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
-                            <div style="display: flex; gap: 1rem; justify-content: center;">
-                                <img src="img/icons/net.png" alt="net" title=".NET Core" loading="lazy">
-                                <img src="img/icons/node.svg" alt="node" title="Node.js" loading="lazy">
-                                <img src="img/icons/mongo.svg" alt="mongo" title="MongoDB" loading="lazy">
-                            </div>
-                            <div style="display: flex; gap: 1rem; justify-content: center;">
-                                <img src="img/icons/sql.svg" alt="sql" title="SQL Server" loading="lazy">
-                                <img src="img/icons/firebase-svgrepo-com.svg" alt="firebase" title="Firebase"
-                                    loading="lazy">
-                            </div>
-                        </div>
-                    </div>
                 </div>
-
                 <div id="myModal3" class="modal">
                     <div class="modal-content"><span class="close" onclick="closeModal3()">&times;</span>
-                        <h2>CCNA Certification</h2><img src="img/titles/CCNA.png" alt="Certificate">
+                        <h2>CCNAv7 course completion</h2><img src="img/titles/CCNA.png" alt="Certificate">
                     </div>
                 </div>
                 <div id="myModal2" class="modal">
                     <div class="modal-content"><span class="close" onclick="closeModal2()">&times;</span>
-                        <h2>SCRUM Certification</h2><img src="img/titles/SCRUM.png" alt="Certificate">
+                        <h2>Scrum Fundamentals Certified</h2><img src="img/titles/SCRUM.png" alt="Certificate">
                     </div>
                 </div>
                 <div id="myModal" class="modal">
@@ -180,67 +232,9 @@
                 </div>
             </section>
 
-            <section id="portafolio">
-                <h2 class="section-title">Project Portfolio</h2>
-                <p class="section-subtitle">Robust applications developed from start to finish FullStack".</p>
-
-                <div class="projects-carousel">
-                    <button class="carousel-control-prev" onclick="prevProject()">&#10094;</button>
-
-                    <div class="carousel-inner">
-                        <div class="cardPortfolio active">
-                            <div class="cardP">
-                                <h3>Veterinaria El Ganadero</h3>
-                                <p>Web app built as a university capstone project for a real veterinary
-                                    clinic.<br>Created using a multi-layer .NET architecture, SQL Server, and Azure App
-                                    Services.<br><br>Features JWT authentication, role-based authorization (admin vs.
-                                    regular user), and a Point-of-Sale module integrated with the Paypal API.</p>
-                                <a href="https://veterinariaelganadero.azurewebsites.net" target="_blank"
-                                    class="btn">Visit Project</a>
-                                <div class="imgs-container">
-                                    <img src="img/vet/vete.jpg" alt="Veterinaria El Ganadero Image">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cardPortfolio">
-                            <div class="cardP">
-                                <h3>Casa de la Hamaca</h3>
-                                <p>Website for a local enterprise. It includes a public product catalog and an
-                                    administrative dashboard for inventory management.<br><br>Developed strictly as a
-                                    FullStack solution with .NET, Azure SQL, and Azure Blob Storage for handling product
-                                    image caching and storage.</p>
-                                <a href="https://casadehamaca.azurewebsites.net" target="_blank" class="btn">Visit
-                                    Project</a>
-                                <div class="imgs-container">
-                                    <img src="img/cdlh.jpg" alt="Casa de la Hamaca Image">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="cardPortfolio">
-                            <div class="cardP">
-                                <h3>Facebook Clone</h3>
-                                <p>Structural simulation of a social network built heavily around Node.js, Express, and
-                                    MongoDB.<br><br>Employs bcrypt encryption, JWT authentication, post creation,
-                                    asynchronous handling of Likes and Comments, a Marketplace, all governed by
-                                    integrated REST APIs.</p>
-                                <a href="https://faceclone-beta.vercel.app/" target="_blank" class="btn">Visit
-                                    Project</a>
-                                <div class="imgs-container">
-                                    <img src="img/face/face1.png" alt="Facebook Clone Image">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button class="carousel-control-next" onclick="nextProject()">&#10095;</button>
-                </div>
-            </section>
-
             <section id="contacto" class="Contacto">
                 <h2 class="section-title">Contact</h2>
-                <p class="section-subtitle">Interested in collaborating or just checking out my work? Let's talk.</p>
+                <p class="section-subtitle">Want to know more about my work or discuss a project? Get in touch.</p>
                 <div class="contact-info">
                     Mobile Phone / WhatsApp<br>
                     <span style="font-weight: 400; font-size: 1.25rem;">+506 6485-6905</span>
@@ -265,17 +259,18 @@
         <footer class="site-footer">
             <div class="footer-container">
                 <p class="footer-text">José Brenes Web Portfolio</p>
-                <p class="footer-text">&copy; 2025</p>
+                <p class="footer-text">&copy; <span data-current-year>2026</span></p>
             </div>
         </footer>
 
     </div>
     <script>
         function changeLanguage() {
-            var language = document.getElementById("language-selector").value;
-            if (language === 'es') {
-                window.location.href = "index.html";
-            }
+            const language = document.getElementById("language-selector").value;
+            const destination = language === 'en' ? 'index_en.html' : 'index.html';
+            const target = new URL(destination, window.location.href);
+            target.hash = window.location.hash;
+            window.location.assign(target.href);
         }
 
         document.querySelectorAll('.navegacion a').forEach(link => {
@@ -288,37 +283,9 @@
     <script src="scripts/bubble.js"></script>
     <script src="scripts/contact.js"></script>
     <script src="scripts/model.js"></script>
-    <script>
-        let currentProjectIndex = 0;
+    <script src="scripts/projects.js"></script>
+    <script src="scripts/site.js"></script>
 
-        function showProject(index) {
-            const projects = document.querySelectorAll('.cardPortfolio');
-            if (index >= projects.length) currentProjectIndex = 0;
-            if (index < 0) currentProjectIndex = projects.length - 1;
-
-            projects.forEach(project => {
-                project.classList.remove('active');
-                project.style.display = 'none';
-            });
-
-            projects[currentProjectIndex].classList.add('active');
-            projects[currentProjectIndex].style.display = 'block';
-        }
-
-        function nextProject() {
-            currentProjectIndex++;
-            showProject(currentProjectIndex);
-        }
-
-        function prevProject() {
-            currentProjectIndex--;
-            showProject(currentProjectIndex);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            showProject(currentProjectIndex);
-        });
-    </script>
 
 </body>
 
