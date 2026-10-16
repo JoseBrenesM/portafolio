@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portafolio-josebrenes.vercel.app/sitemap.xml
